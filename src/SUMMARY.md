@@ -1,8 +1,8 @@
 # The Green Web Dev Book
 
-[The Green Web Dev book](title-page.md)
-[Foreword](foreword.md)
-[Introduction](ch00-00-introduction.md)
+[The Green Web Dev book](ch00-00-title-page.md)
+[Foreword](ch00-01-foreword.md)
+[Introduction](ch00-02-introduction.md)
 
 # Chapter 1
 
