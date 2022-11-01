@@ -1,0 +1,5 @@
+[book]
+authors = ["Mikey Hogarth"]
+language = "en"
+multilingual = false
+src = "src"
