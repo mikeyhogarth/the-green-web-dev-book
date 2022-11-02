@@ -6,6 +6,10 @@ In posuere accumsan nisl eu venenatis. Fusce condimentum nibh non elit facilisis
 
 Vivamus pretium luctus libero, in egestas erat. Aenean sed metus blandit, consequat justo at, viverra leo. Pellentesque posuere in nunc vitae consectetur. Aliquam eu interdum elit. Nam ut scelerisque mauris. Etiam non iaculis metus, ac pulvinar lectus. Ut eu lorem mauris. Ut aliquet lorem suscipit, finibus sapien nec, mollis libero. Donec iaculis dapibus posuere. Cras ac hendrerit libero. Sed ornare, est ac placerat hendrerit, lorem lorem condimentum purus, convallis interdum leo est a tortor. Donec condimentum lorem non orci dictum elementum. Nam ornare risus arcu, non consequat felis euismod vel.
 
+```javascript
+alert("Hello World");
+```
+
 Suspendisse eu finibus tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam sed fringilla lectus. Donec mollis, nulla sit amet mollis feugiat, nisi velit convallis libero, vel consequat ante tellus sed metus. Fusce feugiat lacinia eros in blandit. Sed molestie ligula vel venenatis ultrices. Aliquam a nisi vitae ex finibus malesuada non at nisi.
 
 Etiam id ipsum cursus, vehicula sem a, posuere diam. Cras non congue lorem. Proin pharetra tellus nec ante tincidunt, sit amet vulputate eros molestie. Vestibulum sed semper sem, non efficitur tellus. Proin in mauris consectetur neque mollis tincidunt ac at nisl. Pellentesque nec diam eget est consectetur facilisis eu id diam. Praesent justo turpis, euismod sed orci at, accumsan ultricies dolor. Mauris sit amet nunc dolor. Curabitur placerat ut turpis venenatis efficitur. Integer pulvinar ornare posuere.
