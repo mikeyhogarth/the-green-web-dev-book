@@ -6,10 +6,10 @@
 
 # Chapter 1
 
-- [Foo](./chapter_1_00.md)
-  - [Bar](./chapter_1_01.md)
-  - [Baz](./chapter_1_02.md)
+- [Foo](ch01-00-foo.md)
+  - [Bar](ch01-01-bar.md)
+  - [Baz](ch01-02-baz.md)
 
 # Chapter 2
 
-- [Hello World](./chapter_2_00.md)
+- [Hello World](./ch02_00-hello.md)

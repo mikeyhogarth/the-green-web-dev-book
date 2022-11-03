@@ -1,3 +1,5 @@
 # The Green Web Dev book
 
-Proin vestibulum tortor sit amet placerat porta. Etiam at lacus quis quam fermentum elementum.
+_by Mikey Hogarth_
+
+Tips and prompts to help you build more environmentally sustainable web applications.
