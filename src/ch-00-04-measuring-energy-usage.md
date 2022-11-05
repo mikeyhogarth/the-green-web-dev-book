@@ -1,0 +1,32 @@
+# Measuring energy usage
+
+How exactly do you equate a energy footprint to your website or application?
+
+The bad news is that unfortunately you can't - not exactly. Between the background noise of the measurement, the unseen factors and the inherent opaqueness of the energy spent by web hosting companies, The best you can do is _estimate_ the amount (and that's before you get to the even-more-opaque matter of calculating things like carbon footprints). The _good news_ is that we do have a pretty solid grasp on the factors that cause energy consumption to increase, which is all we need to know in order to optimise.
+
+A French think tank called [The Shift project](https://theshiftproject.org/en/home/) created a report a few years ago entitled [LEAN ICT: TOWARDS DIGITAL SOBRIETY](https://theshiftproject.org/en/article/lean-ict-our-new-report/). In this report, they proposed a model for estimating the carbon emissions of web based applications called the **1-byte model**. This model represents the most prominent formula currently available, essentially it equates weights to several aspects of an application;
+
+- Where is it hosted?
+- What device is it running on?
+- How much data (in bytes) is it using?
+
+From these three facets, the 1-byte model proposes that you can get a carbon estimate for your application. This will, of course, only be an estimate - but getting an accurate number is much less important than the reasoning behind the model: less data means less carbon... and luckily for us, data is _very_ easy to measure: We can see it flowing all through our applications, from the weight of the pages and resources we send to users right back to the requests we send to databases, APIs and microservices.
+
+In addition to data, it is also well established that **CPU cycles** are a drain on electricity and batteries - make your computer work harder and it will require more power. This is much more difficult to measure, but again measuring is very much a "nice to have" - just because we can't equate an exact figure to the carbon footprint of an application does not mean we can't optimise to reduce it. Attempts have been made to create a model for calculating CPU electricity usage in the cloud, notably [Etsy Cloud Jewels](https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/) which provides a model for estimating Google Cloud energy usage.
+
+Whilst it may be that we can never see the true carbon impact of our applications, the main messaging around this issue is very clear:
+
+- Try to **use less data** and not be wasteful.
+- Try to **build efficient, fast applications**.
+
+Minimise these two things and you minimise the electricity consumption and thus the carbon footprint of your application, and in most cases you will also end up minimising your costs and providing a better user experience at the same time. These are the things that the ideas in this book can help you with (we're web developers after all, not scientists!).
+
+Several organisations and groups have dedicated quite a lot of time into the science behind calculating energy estimates. In particular, the Green Web Foundation have produced some extremely thorough [articles](https://www.thegreenwebfoundation.org/news/) on the subject which you should read if you want to dig deeper.
+
+## Useful tools
+
+A number of groups have produced useful tools to **aid with evaluating the carbon footprint of the web**.
+
+The people over at the [Green Web Foundation](https://www.thegreenwebfoundation.org/) implemented a Javascript library called [CO2.js](https://github.com/thegreenwebfoundation/co2.js) which aims to provide an implementation of the 1-byte model for use in tools and APIs.
+
+[Sustainable Web Design](https://sustainablewebdesign.org/) (built by [MightyBytes](https://www.mightybytes.com/) and [Wholegrain Digital](https://www.wholegraindigital.com/)) have produced a couple of tools which can help you calculate a website's carbon footprint: The [Ecograder](https://ecograder.com/) scores websites based on a number of factors using a combination of external APIs. The [Website carbon calculator](https://www.websitecarbon.com/) can give you an estimate of your website's carbon footprint (including a [detailed explaination of how that estimate is calculated](https://www.websitecarbon.com/how-does-it-work/)).
