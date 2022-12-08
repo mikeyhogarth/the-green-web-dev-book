@@ -1,4 +1,4 @@
-# External Resources
+# Appendix A: External Resources
 
 Links to fellow knowledge-sharers in the field of sustainable web development. Please take the time to read these — this book covers ways to reduce network traffix, data and CPU usage, but for a broader look at the topic we recommend these resources:
 

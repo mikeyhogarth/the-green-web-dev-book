@@ -56,4 +56,5 @@
 
 # Appendix
 
-- [External Resources](external-resources.md)
+- [Appendix A: External Resources](external-resources.md)
+- [Appendix B: Useful Tools](useful-tools.md)

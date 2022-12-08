@@ -1,12 +1,15 @@
 # Foreword
 
-This is Bob. Bob drives an electric car. Bob uses his electric car responsibly:
+Meet Bob. A few years ago, Bob decided to start driving an electric car to reduce his reliance on fossil fuels. Despite now running his vehicle entirely on renewable energy, Bob still takes steps to conserve energy.
 
-- He switches the engine off when it's parked.
-- He doesn't use it to drive to the newsagent, as this is only a 2 minute walk.
-- Despite having a car, he uses public transport when he can.
-- If he's driving to the same place as others, he offers those people a ride.
+* He switches his engine off when stationary.
+* He doesn't drive if he's only traveling a short distance.
+* If he's traveling in the same direction as others, he offers rides to those people.
 
-Nobody thinks Bob is weird for acting like this - these behaviors are unanimously considered to be normal, reasonable and sensible... in fact, if Bob _were_ to leave his engine on while he was parked, or if he _were_ to drive 10 seconds up the road to get a newspaper, people might say that Bob is a bit irresponsible. If he didn't offer lifts to people who were travelling to the same destination, well then they might say even worse things about him.
+Nobody thinks Bob is weird for acting like this - in fact, these are the same behaviors that Bob has always practiced, even before deciding to switch to an electric vehicle. If Bob *were* to leave his engine on while parked, or if he *were* to drive twenty seconds up the road to get a newspaper, people might say that Bob is a bit irresponsible. If he didn't offer lifts to people who were traveling to the same destination as he was, well then they might say even worse things about him.
 
-This book is about encouraging people to treat their web applications the way Bob treats his car.
+Conserving fuel is something that most car owners simply accept as being a good idea - they are aware of the price of fuel and are familiar with the things that cause that fuel to be consumed. Experienced drivers can eventually become highly attuned to this, even so far as being able to predict how much a particular journey will cost. Fortunately for drivers, measuring and monitoring fuel consumption is easy because the associated metrics are highly visible - the dashboard of a vehicle displays its current fuel level and all petrol stations advertise their costs clearly in large illuminated letters on their forecourts (particularly frugal drivers may even watch these prices very closely and select fuel vendors based on price).
+
+This penchant for saving energy is not limited to car ownership - we all get electricity bills and we all know to turn things off when we're not using them. Whilst money may be the main driver for our energy-usage behaviors, there are also many other benefits to saving energy. Renewable sources of energy are, as of 2022, still finite resources as technology has not yet advanced to the point where we can store things like solar and wind energy on a national scale. In the back of our minds, we all know that waste is bad and that it evokes many more negative subtexts than just being bad for our wallets. Modern humans simply *hate* seeing things go to waste - renewable or otherwise. 
+
+So why, then, do we seldom apply this same principle when it comes to building software? Perhaps it is because the impact is more difficult to measure or that the waste is too abstract to fathom - but in reality, the principle is exactly the same. This book aims to take our natural inclination to save energy and help you to marry it to the domain of building web applications. It aims to show you that by prioritising sustainability, you can both save money and build much better software that your users will love.
