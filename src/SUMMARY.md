@@ -10,7 +10,7 @@
 - [The impact of web applications](ch-00-03-the-impact-of-web-applications.md)
 - [Measuring energy usage](ch-00-04-measuring-energy-usage.md)
 - [Pitching green initiatives](ch-00-05-pitching-green-initiatives.md)
-- [Don't overdo it!](ch00-06-dont-overdo-it.md)
+- [Stay grounded](ch00-06-stay-grounded.md)
 
 # Making Web Apps Greener
 
