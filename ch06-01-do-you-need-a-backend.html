@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Consider whether you really need a backend</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">The Green Web Dev book</a></li><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="what-is-this-book.html">What is this book?</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="ch00-02-the-climate-crisis.html"><strong aria-hidden="true">1.</strong> The climate crisis</a></li><li class="chapter-item expanded "><a href="ch-00-03-the-impact-of-web-applications.html"><strong aria-hidden="true">2.</strong> The impact of web applications</a></li><li class="chapter-item expanded "><a href="ch-00-04-measuring-energy-usage.html"><strong aria-hidden="true">3.</strong> Measuring energy usage</a></li><li class="chapter-item expanded "><a href="ch-00-05-pitching-green-initiatives.html"><strong aria-hidden="true">4.</strong> Pitching green initiatives</a></li><li class="chapter-item expanded "><a href="ch00-06-stay-grounded.html"><strong aria-hidden="true">5.</strong> Stay grounded</a></li><li class="chapter-item expanded affix "><li class="part-title">Making Web Apps Greener</li><li class="chapter-item expanded "><a href="ch01-00-general-tips.html"><strong aria-hidden="true">6.</strong> General Tips</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-adopt-a-data-buydget.html"><strong aria-hidden="true">6.1.</strong> Adopt a data budget</a></li><li class="chapter-item expanded "><a href="ch01-02-support-browsers-sustainably.html"><strong aria-hidden="true">6.2.</strong> Support browsers sustainably</a></li><li class="chapter-item expanded "><a href="ch01-03-curate-features-responsibly.html"><strong aria-hidden="true">6.3.</strong> Curate features responsibly</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-00-styles.html"><strong aria-hidden="true">7.</strong> Styles</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-print-specific-styles.html"><strong aria-hidden="true">7.1.</strong> Create print-specific styles</a></li><li class="chapter-item expanded "><a href="ch02-02-employ-responsive-design.html"><strong aria-hidden="true">7.2.</strong> Employ responsive design</a></li><li class="chapter-item expanded "><a href="ch02-03-use-webfonts-responsibly.html"><strong aria-hidden="true">7.3.</strong> Use webfonts responsibly</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-frontend-code.html"><strong aria-hidden="true">8.</strong> Frontend Code</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-01-choose-appropriate-libraries.html"><strong aria-hidden="true">8.1.</strong> Choose appropriate libraries</a></li><li class="chapter-item expanded "><a href="ch03-02-import-efficiently.html"><strong aria-hidden="true">8.2.</strong> Import efficiently</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-00-content.html"><strong aria-hidden="true">9.</strong> Content</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-keep-content-concise.html"><strong aria-hidden="true">9.1.</strong> Keep content concise</a></li><li class="chapter-item expanded "><a href="ch04-02-lazy-load-content.html"><strong aria-hidden="true">9.2.</strong> Lazy load content</a></li><li class="chapter-item expanded "><a href="ch04-03-avoid-excessive-markup.html"><strong aria-hidden="true">9.3.</strong> Avoid excessive markup</a></li><li class="chapter-item expanded "><a href="ch04-04-use-semantic-markup.html"><strong aria-hidden="true">9.4.</strong> Use semantic markup</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-images.html"><strong aria-hidden="true">10.</strong> Images</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-01-lazy-load-images.html"><strong aria-hidden="true">10.1.</strong> Lazy load images</a></li><li class="chapter-item expanded "><a href="ch05-02-never-use-gifs.html"><strong aria-hidden="true">10.2.</strong> Never use GIFs</a></li><li class="chapter-item expanded "><a href="ch05-03-resize-images-appropriately.html"><strong aria-hidden="true">10.3.</strong> Resize images appropriately</a></li><li class="chapter-item expanded "><a href="ch05-04-use-appropriate-image-formats.html"><strong aria-hidden="true">10.4.</strong> Use appropriate image formats</a></li><li class="chapter-item expanded "><a href="ch05-05-make-use-of-modern-image-formats.html"><strong aria-hidden="true">10.5.</strong> Make use of modern image formats</a></li></ol></li><li class="chapter-item expanded "><a href="ch06-00-backend-code.html"><strong aria-hidden="true">11.</strong> Backend Code</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch06-01-do-you-need-a-backend.html" class="active"><strong aria-hidden="true">11.1.</strong> Consider whether you really need a backend</a></li><li class="chapter-item expanded "><a href="ch06-02-choose-a-green-host.html"><strong aria-hidden="true">11.2.</strong> Choose a green host</a></li><li class="chapter-item expanded "><a href="ch06-03-optimise-data-queries.html"><strong aria-hidden="true">11.3.</strong> Optimise data queries</a></li><li class="chapter-item expanded "><a href="ch06-04-optimise-your-API.html"><strong aria-hidden="true">11.4.</strong> Optimize your API</a></li><li class="chapter-item expanded "><a href="ch06-05-use-the-right-database.html"><strong aria-hidden="true">11.5.</strong> Use the right kind of database</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="external-resources.html"><strong aria-hidden="true">12.</strong> Appendix A: External Resources</a></li><li class="chapter-item expanded "><a href="useful-tools.html"><strong aria-hidden="true">13.</strong> Appendix B: Useful Tools</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="use-the-right-kind-of-database"><a class="header" href="#use-the-right-kind-of-database">Use the right kind of database</a></h1>
+<p>Don't default to creating a backend server or a database if you don't need to. There may be alternatives, such as a JAMStack, static JSON file or just plan old HTML, which in combination with cloud-based online services could provide the functionality you need without the many overheads (environmental and otherwise) of running your own servers.</p>
+<h2 id="the-problem"><a class="header" href="#the-problem">The Problem</a></h2>
+<p>All too often, developers will reach straight for popular stacks or familiar stacks for everything. Stacks such as;</p>
+<ul>
+<li><strong>LAMP/MAMP</strong> (Linux/Mac, Apache, MySQL, PHP) - arguably the stack that popularized &quot;stacks&quot; in web development.</li>
+<li><strong>LYME</strong> (Linux, Yaws, Mnesia, Erlang)</li>
+<li><strong>MEAN/MERN/MEVN</strong> (Mongo, Express, Angular/React/Vue, Node)</li>
+</ul>
+<p>These stacks are popular conventions and there will of course be times when these are the perfect solution - a LAMP based solution, for example, provides a simple deployment model that can easily be performed by people with very little technical experience. This gives everyone the ability to deploy &quot;out of the box&quot; solutions to common problems.</p>
+<p>Oftentimes though, these stacks are <strong>used by default without considering alternatives</strong>. LAMP-stack based library Wordpress, for example, reportedly powers <a href="https://wordpress.com/">42% of the web</a> and has a huge and vibrant ecosystem. There's no disputing that Wordpress is an excellent CMS, but how many of those sites are just a couple of static pages and a contact form?</p>
+<h2 id="the-alternative"><a class="header" href="#the-alternative">The Alternative</a></h2>
+<p>Consider the aforementioned scenario, where a customer simply wants some static content and some kind of form, maybe one that sends emails. You can achieve this using static HTML and some online services;</p>
+<ul>
+<li>If the customer will never be editing the content themselves, why plug in a CMS? You could either just hard code the static content, write it in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> files or even put it into a local <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> file.</li>
+<li>If the customer wants the ability to edit content themselves, consider providing this feature through a cloud based content platform such as <a href="https://www.sanity.io/">Sanity.io</a>.</li>
+<li>If the customer wants a contact form, the hosting provider <a href="https://www.netlify.com/">Netlify</a> provides hosting for static sites, plus the abiltiy to <a href="https://docs.netlify.com/forms/setup/">create custom forms</a> to collect feedback. Alternatively you could use an email platform such as <a href="https://sendgrid.com/">SendGrid</a>.</li>
+</ul>
+<p>The tooling around JavaScript is so good these days that implementing the above might not be as tricky as you would think. On top of this, most online services will be run out of the &quot;big three&quot; cloud providers (Microsoft, Google and Amazon) who all have made sustainability pledges and are comitted to moving towards 100% renewable energy. Cloud based solutions often also implement sustainable scaling strategies to ensure their resources are being used efficiently.</p>
+<p>It'll probably cost quite a lot less than running a server 24/7 too.</p>
+<h2 id="jamstack"><a class="header" href="#jamstack">JAMstack</a></h2>
+<p>JAMStack (Javascript, APIs and Markup) is a modern approach to creating web applications where you handle the layout, functionality and content on the client using JavaScript and Markdown. Any functionality that cannot be handled on the client (such as sending emails) is handled using APIs, be they either online services or APIs you write yourself.</p>
+<p>The advantage of all this is that you don't have a server running around the clock waiting for requests that may never come. Popular JAMStack frameworks include <a href="https://nextjs.org/">Next.JS</a>, <a href="https://www.gatsbyjs.com/">Gatsby</a> and <a href="https://gohugo.io/">Hugo</a>.</p>
+<h2 id="databases"><a class="header" href="#databases">Databases</a></h2>
+<p>On the database front, oftentimes people will spin up a database server purely because they believe that is the only option for storing data... but you might be able to get away with a simple JSON file containing the whole database. This could then be cached locally (depending how big it is) and hey presto - all data access is happening locally and no data is being sent over the wire.</p>
+<p>If you are working mainly with static data</p>
+<ul>
+<li>That changes infrequently</li>
+<li>That is only really edited by power users or developers</li>
+<li>With simple access patters such as &quot;get by id&quot; or &quot;filter by category&quot;</li>
+</ul>
+<p>Then <strong>you probably don't need a database</strong> - another carbon (and money) expense you can get rid of, plus another boost to your application's performance. Choosing JSON as a format also means you have an easier path to migrate to a database should you ever decide you need one, as JSON is the format used by popular solutions such as <a href="https://www.mongodb.com/">MongoDB</a> and <a href="https://couchdb.apache.org/">CouchDB</a>.</p>
+<p>It's also <strong>one less security concern</strong> for you to worry about, as online providers will often take care of data protection concerns such as backups and data integrity for you.</p>
+<h2 id="relevant-links"><a class="header" href="#relevant-links">Relevant Links</a></h2>
+<ul>
+<li><a href="https://jamstack.org/">JAMStack.org</a> - A comprohensive guide for building JAMStack sites.</li>
+<li><a href="https://stackshare.io/">StackShare.io</a> - see what stacks other companies are using.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="ch06-00-backend-code.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="ch06-02-choose-a-green-host.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="ch06-00-backend-code.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="ch06-02-choose-a-green-host.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

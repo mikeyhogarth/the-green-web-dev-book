@@ -1,0 +1,953 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">The Green Web Dev book</a></li><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="what-is-this-book.html">What is this book?</a></li><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="ch00-02-the-climate-crisis.html"><strong aria-hidden="true">1.</strong> The climate crisis</a></li><li class="chapter-item expanded "><a href="ch-00-03-the-impact-of-web-applications.html"><strong aria-hidden="true">2.</strong> The impact of web applications</a></li><li class="chapter-item expanded "><a href="ch-00-04-measuring-energy-usage.html"><strong aria-hidden="true">3.</strong> Measuring energy usage</a></li><li class="chapter-item expanded "><a href="ch-00-05-pitching-green-initiatives.html"><strong aria-hidden="true">4.</strong> Pitching green initiatives</a></li><li class="chapter-item expanded "><a href="ch00-06-stay-grounded.html"><strong aria-hidden="true">5.</strong> Stay grounded</a></li><li class="chapter-item expanded affix "><li class="part-title">Making Web Apps Greener</li><li class="chapter-item expanded "><a href="ch01-00-general-tips.html"><strong aria-hidden="true">6.</strong> General Tips</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-adopt-a-data-buydget.html"><strong aria-hidden="true">6.1.</strong> Adopt a data budget</a></li><li class="chapter-item expanded "><a href="ch01-02-support-browsers-sustainably.html"><strong aria-hidden="true">6.2.</strong> Support browsers sustainably</a></li><li class="chapter-item expanded "><a href="ch01-03-curate-features-responsibly.html"><strong aria-hidden="true">6.3.</strong> Curate features responsibly</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-00-styles.html"><strong aria-hidden="true">7.</strong> Styles</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-print-specific-styles.html"><strong aria-hidden="true">7.1.</strong> Create print-specific styles</a></li><li class="chapter-item expanded "><a href="ch02-02-employ-responsive-design.html"><strong aria-hidden="true">7.2.</strong> Employ responsive design</a></li><li class="chapter-item expanded "><a href="ch02-03-use-webfonts-responsibly.html"><strong aria-hidden="true">7.3.</strong> Use webfonts responsibly</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-frontend-code.html"><strong aria-hidden="true">8.</strong> Frontend Code</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-01-choose-appropriate-libraries.html"><strong aria-hidden="true">8.1.</strong> Choose appropriate libraries</a></li><li class="chapter-item expanded "><a href="ch03-02-import-efficiently.html"><strong aria-hidden="true">8.2.</strong> Import efficiently</a></li></ol></li><li class="chapter-item expanded "><a href="ch04-00-content.html"><strong aria-hidden="true">9.</strong> Content</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-keep-content-concise.html"><strong aria-hidden="true">9.1.</strong> Keep content concise</a></li><li class="chapter-item expanded "><a href="ch04-02-lazy-load-content.html"><strong aria-hidden="true">9.2.</strong> Lazy load content</a></li><li class="chapter-item expanded "><a href="ch04-03-avoid-excessive-markup.html"><strong aria-hidden="true">9.3.</strong> Avoid excessive markup</a></li><li class="chapter-item expanded "><a href="ch04-04-use-semantic-markup.html"><strong aria-hidden="true">9.4.</strong> Use semantic markup</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-images.html"><strong aria-hidden="true">10.</strong> Images</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-01-lazy-load-images.html"><strong aria-hidden="true">10.1.</strong> Lazy load images</a></li><li class="chapter-item expanded "><a href="ch05-02-never-use-gifs.html"><strong aria-hidden="true">10.2.</strong> Never use GIFs</a></li><li class="chapter-item expanded "><a href="ch05-03-resize-images-appropriately.html"><strong aria-hidden="true">10.3.</strong> Resize images appropriately</a></li><li class="chapter-item expanded "><a href="ch05-04-use-appropriate-image-formats.html"><strong aria-hidden="true">10.4.</strong> Use appropriate image formats</a></li><li class="chapter-item expanded "><a href="ch05-05-make-use-of-modern-image-formats.html"><strong aria-hidden="true">10.5.</strong> Make use of modern image formats</a></li></ol></li><li class="chapter-item expanded "><a href="ch06-00-backend-code.html"><strong aria-hidden="true">11.</strong> Backend Code</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch06-01-do-you-need-a-backend.html"><strong aria-hidden="true">11.1.</strong> Consider whether you really need a backend</a></li><li class="chapter-item expanded "><a href="ch06-02-choose-a-green-host.html"><strong aria-hidden="true">11.2.</strong> Choose a green host</a></li><li class="chapter-item expanded "><a href="ch06-03-optimise-data-queries.html"><strong aria-hidden="true">11.3.</strong> Optimise data queries</a></li><li class="chapter-item expanded "><a href="ch06-04-optimise-your-API.html"><strong aria-hidden="true">11.4.</strong> Optimize your API</a></li><li class="chapter-item expanded "><a href="ch06-05-use-the-right-database.html"><strong aria-hidden="true">11.5.</strong> Use the right kind of database</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="external-resources.html"><strong aria-hidden="true">12.</strong> Appendix A: External Resources</a></li><li class="chapter-item expanded "><a href="useful-tools.html"><strong aria-hidden="true">13.</strong> Appendix B: Useful Tools</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="the-green-web-dev-book"><a class="header" href="#the-green-web-dev-book">The Green Web Dev Book</a></h1>
+<p><em>by Mikey Hogarth</em></p>
+<p>Ideas and resources to help you build more environmentally sustainable web applications.</p>
+<blockquote>
+<p><strong>This book is a work in progress</strong> and is currently in an incomplete state.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="foreword"><a class="header" href="#foreword">Foreword</a></h1>
+<p>Meet Bob. A few years ago, Bob decided to start driving an electric car to reduce his reliance on fossil fuels. Despite now running his vehicle entirely on renewable energy, Bob still takes steps to conserve energy.</p>
+<ul>
+<li>He switches the engine off when the vehicle is stationary.</li>
+<li>He doesn't drive very short distances.</li>
+<li>If he's traveling in the same direction as others, he will offer rides.</li>
+</ul>
+<p>Nobody thinks Bob is weird for acting like this - in fact, these are the same behaviors that Bob has always practiced, even before deciding to switch to an electric vehicle. If Bob <em>were</em> to leave his engine on while parked, or if he <em>were</em> to drive twenty seconds up the road to get a newspaper, people might say that Bob is a bit irresponsible. If he didn't offer lifts to people who were traveling to the same destination as he was, well then they might say even worse things about him.</p>
+<p>Conserving fuel is something that most car owners simply <em>accept</em> as being a good idea. Most are fully aware of the price of fuel and are familiar with the things that cause fuel to be consumed, with some more experienced drivers even being able to predict how much particulars journeys will cost. Fortunately for drivers, measuring and monitoring fuel consumption is very easy because the associated metrics are highly visible - the dashboard of a vehicle displays its current fuel level and almost all petrol stations advertise their fuel prices clearly in large illuminated letters on their forecourts (particularly frugal drivers watch these prices very closely).</p>
+<p>The penchant for saving energy is not limited to car ownership - we all get electricity bills and we all know to turn things off when we're not using them. Money may be the main driver for our energy-usage behaviors, but there is something more primal going on here. In the back of our minds, the very notion of waste feels awful even if you put aside the associated monetory costs. Modern humans simply <em>hate</em> seeing things go to waste - renewable or otherwise.</p>
+<p>So why then do we seldom apply this same principle when it comes to building software applications? Perhaps its because the impact is so much more difficult to measure or that the wastage is too abstract to comprehend - but in reality, the principle is exactly the same. This book aims to take our natural inclination to save energy and marry it to the domain of building web applications. It aims to show you that by prioritising sustainability, you can both save money and build much better software that your users will love.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-this-book"><a class="header" href="#what-is-this-book">What is this book?</a></h1>
+<p>The core aim of this book is to highlight the relationship between web application development and climate and to make this a key factor in technical decision-making.</p>
+<p>The main bulk of the text presents ideas and examples to help illustrate how we can contribute to reducing the energy cost of the applications we develop. It also explores some of the major themes that you might encounter when approaching this subject within your organisation and aims to address some of the questions you may have about sustainable web development.</p>
+<p>The intended audience for this book is anyone who is involved in the development of web applications - not only web developers but also peripheral roles such as content creators, delivery managers, product owners and scrum masters. It is not necessary to read this book in chapter order, neither is it necessary to read this whole book if you are only interested in a particular aspect of development - I'll quickly canter through the major themes that are covered.</p>
+<ul>
+<li>
+<p><strong>General Tips</strong> applicable to all aspects of web development.</p>
+</li>
+<li>
+<p><strong>Styles</strong> and how they can be made more efficient.</p>
+</li>
+<li>
+<p><strong>Content and Markup</strong> - the information that your applications deliver to users.</p>
+</li>
+<li>
+<p><strong>Frontend code</strong> that runs on client machines - JavaScript or otherwise.</p>
+</li>
+<li>
+<p><strong>Backend code</strong> that runs on your own pysical servers or in the cloud.</p>
+</li>
+<li>
+<p><strong>Images</strong> - often the biggest offender in terms of a client's energy footprint and often where the lowest hanging fruit is in terms of optimising.</p>
+</li>
+</ul>
+<p>There is more to running sustainable web applications than just this, however these are what we focus on here - Appendix A provides references to some additional resources if you don't find what you're looking for in the above list.</p>
+<h2 id="what-is-this-book-not"><a class="header" href="#what-is-this-book-not">What is this book not?</a></h2>
+<p>It is also worth quickly pointing out what this book is <strong>not</strong>.</p>
+<ul>
+<li>This book assumes that you believe that <strong>climate change is real</strong> and makes no attempt to convince you of this fact. The climate crisis itself is only mentioned very briefly.</li>
+<li>This book assumes you already have a working knowledge of web development (although a <em>complete</em> working knowledge is not required if you are only interested in particular aspects). I have, however, attempted to make the text as accessible to all audiences as possible.</li>
+<li>This book is <strong>not an exhaustive list</strong> of everything you can do to create sustainable web applications. Here we mainly focus on some of the major themes involved in standing up web-based informaiton systems but it is possible to go a lot deeper on some of the  topics and also a lot wider in terms of scope. All we are trying to do here is raise awareness of the issue and give you some practical examples to inspire your own ideas.</li>
+<li>This book does not concern itself too much with the science of measuring energy usage. Whilst this is an important factor, there is plenty of research already out there which does a much better job of exploring this topic than I could. Some of these are referenced in Appendix A.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-climate-crisis"><a class="header" href="#the-climate-crisis">The climate crisis</a></h1>
+<p>The <strong>Climate Crisis</strong> currently affecting the planet is one of the most pressing existential threats that humankind has ever faced. Carbon emissions caused by years of post industrial human activity is causing Earth's temperature to rise, and we are already seeing the effects of this through an increase in extreme weather conditions, flooding and wildfires, as well as irreversable damage to the polar ice caps.</p>
+<p>The current scientific consensus estimates that we will begin to see the worst effects of climate change once the Earth's temperature reaches between 1.5°C and 2°C above pre-industrial levels - effects such as famine, drought and extinction. Alarmingly, these are impacts that will be felt worst in the poorest countries the world - those who have contributed the least in terms of carbon emissions. The science also tells us that once Earth reaches this temperature, some of the effects may be irreversable.</p>
+<p>Efforts are being made globally to reduce carbon emissions. Every country in the world has signed up to the <a href="https://en.wikipedia.org/wiki/Paris_Agreement">Paris Agreement</a>, which is a pledge to stay below the 1.5° figure. Whilst industry appears to finally be waking up to this reality, the <strong>change is not happening quickly enough</strong> and currently we are on track to reach 1.5° this century, with earliest estimates being as soon as 2030. The only chance we have of preventing this is for all nations to work together and make drastic changes to their environmental policies, industries and to encourage their populations to lead greener lifestyles.</p>
+<p>This book makes no further attempts to convince you on the urgency of this matter.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-impact-of-web-applications"><a class="header" href="#the-impact-of-web-applications">The impact of web applications</a></h1>
+<p>Most of the energy cost that websites and applications consume comes through electricity, so we could just kick back and wait for the world to switch to renewable energy right? Leave it to someone else to sort out and just carry on doing things the way we currently are?</p>
+<p>Well, No. Not exactly. Firstly, we're not there yet in terms of sustaining 100% renewable energy at a national scale, so anything we can do to both slow the consumption of fossil fuels and reduce overall energy consumption generally is a positive thing. Secondly, there are other costs aside from just the electricity spend, costs such as increased e-waste that our applications may be indirectly (or directly) contributing to. Adopting a more environmentally friendy approach to creating web applications carries many other benefits aside from helping to conserve Earth's resources.</p>
+<p>As <strong>web developers</strong> and <strong>digital professionals</strong>, we are in a <strong>unique position</strong> to help reduce the energy footprint caused by our industry. Typically, much of the blame for emissions is aimed at data centers, but we as developers do share in that responsibility because it is our applications that they are hosting. Because there is a direct correlation between the energy impact of digital services and the number of users/visitors that those services receive, a single good decison that we make around sustainability can propogate into huge savings on energy consumption for our applications.</p>
+<p>This book aims to highlight some of the ways that web developers reduce the energy footprint of their applications - and the great news is that many of these techniques are simple to implement and usually come with other bonuses, such as faster page load times and cheaper hosting bills.</p>
+<p>You may find many of the ideas to simply be common sense... and that's entirely the point. Despite these all (mostly) being well known best practices, they are still things which we regularly see skipped during application development due to the delivery pressures that most developers find themselves under, and any developer will tell you that the first thing that gets sacrificed when the pressure starts to mount is code quality. The aim of this book is to re-frame these best-practices through the lens of sustainability. We have been living in the &quot;age of plenty&quot; with regards to data and compute, and have had the luxury of not really having to worry about how much data we use - what this book is suggesting is that we should pivot towards thinking about the energy cost of every piece of our applications and shift to using our skills responsibly.</p>
+<p>Because &quot;sustainabile engineering&quot; is largely synonymous with &quot;good engineering&quot;, you'll hopefully find that you're already hitting many sustainability beats with your applications already just by being an awesome developer. With any luck, you will also find some more ideas that will inspire you to make your web application even more environmentally friendly.</p>
+<p>This is <strong>not about making developers feel guilty</strong> for every byte of data they use or every CPU cycle they consume, nor is it about shaming anyone or telling them what they should or should not be doing in their application - It's simply about making energy usage a <em>conscious</em> part of our software development process - and getting started may be a lot easier than you think.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="measuring-energy-usage"><a class="header" href="#measuring-energy-usage">Measuring energy usage</a></h1>
+<p>How exactly do you equate a energy footprint to your website or application?</p>
+<p>The bad news is that you basically can't. Between the background noise of the measurement itself, unseen factors such as user device behaviors and the inherent opaqueness of hosting providers, getting an exact figure is essentially impossible. The best you can hope for is to get a decent <em>estimate</em> that you are comfortable basing targets around. </p>
+<p>The <em>good news</em> is that the factors that cause energy consumption to increase are fairly well understood, so we know what we need to optimise for even if we can't get an exact measurement of the associated energy cost. We can use this information to build a rough model for linking our application metrics to energy usage, and indeed several such models already exist in the wild.</p>
+<p>A French think tank called <a href="https://theshiftproject.org/en/home/">The Shift project</a> created a report a few years ago entitled <a href="https://theshiftproject.org/en/article/lean-ict-our-new-report/">LEAN ICT: TOWARDS DIGITAL SOBRIETY</a>. In this report, they proposed a model for estimating the carbon emissions of web based applications called the <strong>1-byte model</strong>. This model has become fairly prominent in the sustainable IT space and is often cited in the media. Essentially, the one-byte model applies coefficients to several metrics;</p>
+<ul>
+<li>Where is it hosted?</li>
+<li>What device is it running on?</li>
+<li>How much data is it using, both at rest and over the network?</li>
+</ul>
+<p>From these, the 1-byte model proposes that you can get an energy estimate for your application. Colleting the metrics associated with these elements is broadly possible using a combination of client and server-side analytics software, but this highlights the earlier point about how &quot;rough&quot; this estimate is going to be. How can you be sure, for example, which device each of your users are using, or how much data usage is attributable to each device? This is made even more difficult by the fact that users are somewhat empowered to hide this information from you! The one-byte model itself often comes under criticism for this very reason, with statements being made about its accuracy and therefore the validity of any measurements derived from it... but is getting a precise measurement for energy consumption really the most important thing here? Of course, most organisations will need to adopt <em>some</em> form of measurement in order to track progress, but optimising is the real goal here and you never hear anyone arguing that the factors this model considers are not the right ones. </p>
+<p>There are well established ways of measuring things like CPU cycles and Data Usage - with industry leaders such as ElasticSearch allowing for metric collection to have become &quot;business as usual&quot; for anyone who owns kit either on premises or in a data centre - generally you need to know these statistics in order to keep your systems healthy and to diagnose issues - in some cases, you may even have access to your organisation's electricity bill and be able to <em>see</em> how much energy your servers are consuming. This becomes a lot more difficult if you are hosting within the cloud though as suddenly the energy usage is abstracted away and just becomes a monetary figure. Attempts have been made to create a model for calculating energy usage in the cloud, notably <a href="https://codeascraft.com/2020/04/23/cloud-jewels-estimating-kwh-in-the-cloud/">Etsy Cloud Jewels</a> which provides a model for estimating Google Cloud energy usage.</p>
+<p>Whilst it may be that we can never see the true carbon impact of our applications, the main messaging around this issue is very clear:</p>
+<ul>
+<li>Try to <strong>use less data</strong> and not be wasteful.</li>
+<li>Try to <strong>build efficient, fast applications</strong> to optimise for CPU cycles.</li>
+</ul>
+<p>The ideas within this book mainly focus on these two aspects - minimise these, and you minimise the electricity consumption of your application. In most cases you will also enocunter side-benefits and will find that by doing this you are inadvertedly optimising for cost and user experience at the same time.</p>
+<p>Several organisations and groups have dedicated lot of time into the science behind calculating energy estimates. In particular, the Green Web Foundation have produced some extremely thorough <a href="https://www.thegreenwebfoundation.org/news/">articles</a> on the subject which you should read if you want to dig deeper.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pitching-green-initiatives"><a class="header" href="#pitching-green-initiatives">Pitching green initiatives</a></h1>
+<p>How do you convince your boss, your colleagues, or even yourself, that reducing the carbon footprint of your web application is a good idea?</p>
+<p>In a perfect world it would be enough that reducing energy consumption is good for the planet. We know that the climate crisis is real and that, in varying capacities, we all have a role to play in keeping the situation under control. Realistically though, we need to accept that currently this is a <strong>tough sell</strong> and that taking action for the greater good might not be enough to convince everyone.</p>
+<p>Web applications have no direct, observable impact on our natural landscape, so as developers we don't face the same criticisms as other industries. The fact that websites even <em>have</em> a carbon footprint is <strong>completely invisible</strong> to most people. This can obscure the benefits of making our our applications more sustainable. Our users won't notice, and we won't see any benefit ourselves, so why should we care?</p>
+<p>This is a completely fair challenge - however, it is countered very easily: The digital industry is luckier than many others in one crucial way: <strong>Reducing the energy footprint of a web application almost always carries associated benefits</strong>. We present some of these here in an effort to help you sell this idea to others.</p>
+<h2 id="it-doesnt-need-to-be-lots-of-work"><a class="header" href="#it-doesnt-need-to-be-lots-of-work">It doesn't need to be lots of work</a></h2>
+<p>People often worry that being environmentally friendly will be expensive, disruptive, and time-consuming. Sometimes these perceptions are absolutely real and can be major blockers to taking action. A development shop is a business after all and most digital businesses are likely to be running very <strong>tight deadlines</strong> to deliver <strong>ambitious features</strong> for their users. It is understandable, then, that a company may be behind the idea of being greener <em>in principle</em> but not to the point where they'd consider dedicating any time or resources to it.</p>
+<p>Browse through the prompts on this site though, and you will see that many of them represent <strong>very small, simple changes</strong> that do <em>not</em> contribute any significant overhead to development costs - the only thing standing in the way for many of the techniques is simply a <strong>lack of knowledge or awareness</strong>. Our prompts are specifically designed as <em>quick-reads</em> to overcome this very hurdle. Even if the only changes you make to your application are the really easy ones, you could still end up making a big difference and seeing huge rewards.</p>
+<h2 id="itll-save-you-money"><a class="header" href="#itll-save-you-money">It'll save you money</a></h2>
+<p>It's a fact of life that your hosting provider is not in the business of giving out free lunches. The tarrifs for most providers include costs which are directly and proportionally related to your CPU and Data usage. Coincidentally, these are the two major things you need to minimize in order to make your website more sustainable. The upshot of this is that <strong>reducing the energy footprint of your web application will almost always also mean a reduction in your hosting costs</strong>.</p>
+<h2 id="itll-make-your-users-happier"><a class="header" href="#itll-make-your-users-happier">It'll make your users happier</a></h2>
+<p>There is a massive crossover between good user experience and good sustainability. Don't confuse your users - not only will they spend less time clicking around your site and wasting battery/consuming data, they are also more likely to have a better experience. Design a clear, unobtrusive user journey through your application and make it fast - you will not only save on energy consumption, you will also <strong>make your customers happier</strong>.</p>
+<h2 id="it-future-proofs-your-organization"><a class="header" href="#it-future-proofs-your-organization">It future-proofs your organization</a></h2>
+<p>The climate crisis is becoming more and more urgent, and it is only a matter of time before the metrics around carbon emissions become a major factor in the day to day running of organizations. Among the factors are:</p>
+<ul>
+<li>We will see a younger generation of more <strong>climate-focussed employees</strong> who are more likely to include sustainability policies among the criteria they use to select an employer.</li>
+<li>Data and CPU might become <strong>more expensive</strong>. Currently we are seeing prices mostly heading downwards as hosting companies compete with each other to be the most affordable. At some point, legistlation may be introduced forcing hosting providers to invest in more sustainable infrastructure - a cost which they will almost certainly pass on to the customer.</li>
+<li><strong>Due dilligence in acquisitions</strong> could begin to see investors looking for carbon neutrality and sustainable policies as major factors in whether or not to acquire businesses.</li>
+<li>Browsers may start <strong>making carbon usage more visible</strong> - there are <a href="https://chrome.google.com/webstore/detail/neutral/oagdejngkgbfnaankoehhanicaodcdpd?hl=en">already plugins that display carbon usage on websites</a> which may one day become standard. If this happens, your users may become more discerning, choosing which companies to buy from based on their <em>digital</em> carbon footprint. Can you risk the reputational damage of being seen as a &quot;dirty&quot; website by your customers?</li>
+<li>SEO companies such as <a href="https://developers.google.com/search/docs/beginner/seo-starter-guide">Google already punish heavier or slower websites</a> in terms of page rank - this means the more environmentally friendly sites will appear nearer to the top of search results. As the world moves towards being more sustainable, failure to act might see you dropping in the <strong>search rankings</strong> and <strong>losing customers</strong>.</li>
+<li>Digital agencies may start to see sustainability featuring high on their customers list of requirements - and even if that doesn't start happening, including it in your pitches is a great way to <strong>stand out from the crowd</strong> and potentially open your customer's eyes to a value-add they hadn't even thought of.</li>
+</ul>
+<p>This list could go on for much longer. Whilst all of the above are just educated predictions (this is the nature of futurology after all) are they really so far fetched? When you consider that making the right changes can be simple and affordable, we firmly believe that <strong>it is a bigger risk to ignore these</strong> than it is to factor them into your future strategies.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stay-grounded"><a class="header" href="#stay-grounded">Stay grounded</a></h1>
+<p>It's great that you've decided to educate yourself about sustainable web development - we're all going to need to make changes to the way we work over the coming years and this book can help you to get a decent handle on the factors that contribute towards the energy footprint of web applications. The intention is <em>not</em>, however, to make anyone feel guilty for creating digital experiences. There is a temptation, once you know what to look for, to obsess over every single byte of data your applications consume or to agonize over the minutiae of factors that would affect CPU efficiency. </p>
+<p>Please try to balance the ideas in this book with reasoned thought when applying them to any situation, and definitely avoid using the ideas as <em>weapons</em> to win arguments with your colleagues. By taking the advice contained herein too far, you risk damaging the user expericnce of your product and driving customers away.</p>
+<p>Many of the ideas presented in this book have effects that would be invisible to your users but extremely valuable from a sustainability perspective. This is not always the case - some of these ideas <strong>do</strong> have a noticable impact on things like image quality, brand identity and user experience. This presents you with a tradeoff: How much optimisation is &quot;enough&quot;? For this, there is a golden rule...</p>
+<blockquote>
+<h3 id="the-golden-rule"><a class="header" href="#the-golden-rule">The Golden Rule</a></h3>
+<p>Focus on reducing waste, not capability.</p>
+</blockquote>
+<p>If you go into this all guns blazing, insisting that every single byte of data and every single CPU cycle must be preserved at all costs, you risk not only damaging your business but also of losing the hearts and minds of those you are aiming to convince. Make sure all decisions are accompanied by a large dollop of common sense because it can happen that in choosing the most sustainable option, you erode the experience for your developers and users so much that the productivity hit ends up actually <em>increasing</em> the amount of energy consumed by your application.</p>
+<p>Many of the more crunchy pain points are related to <strong>design</strong>, an aspect where many tradeoffs can be made and where &quot;vitalness&quot; to the application beocmes somewhat subjective. Being sustainable does <em>not</em> necessarily mean that your application will be unattractive, but many common design trends tend to lean towards being quite energy-intensive whilst adding only non-functional features:</p>
+<ul>
+<li>Large, bold images</li>
+<li>Streaming videos or interactive widgets</li>
+<li>Transitions and animations</li>
+</ul>
+<p>These are all things that <em>will</em> increase the energy footprint of your app, and <em>might</em> improve the user experience, so you can expect any discussions about dropping these kinds of features to become a bit feisty but bear in mind that it is possible to take things too far in <em>either</em> direction. You could, for example, abandon styles completely and leave it all to the browser defaults - this will have a noticable <em>positive</em> impact on your website's energy footprint (yay) but will almost certainly have a <em>negative</em> impact on user experience, possibly even causing your users to believe your site is unprofessional or even that it's broken! It won't, as they say in the business, &quot;pop&quot; any more and this could end up affecting customer engagement and ultimately conversions.</p>
+<p>Try to focus on the things that cause the biggest impact from an energy perspective, but which have the least impact to your users. It's not about scrabbling to save every CPU cycle or every byte of data - it is about striking a sensible balance between your appliction's energy footprint and the value it offers to users.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="general-tips"><a class="header" href="#general-tips">General Tips</a></h1>
+<p>This section contains tips and ideas related to no one particular aspect of web development, covering the more strategic and less tangible elements. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adopt-a-data-budget"><a class="header" href="#adopt-a-data-budget">Adopt a data budget</a></h1>
+<p>Choose a data budget for your application and stick to it. Research such as the <a href="https://theshiftproject.org/wp-content/uploads/2019/03/Lean-ICT-Report_The-Shift-Project_2019.pdf">lean ITC report</a> by <a href="https://theshiftproject.org/en/home/">Shift Project</a> indicates that there is a direct correlation between the amount of data an application uses and the amount of carbon it generates. As developers we seldom pay attention to the data we use until it starts to affect our application's performance. This is largely because we live in an age where storage is cheap, and we have no incentive to reduce the volume of data we transmit.</p>
+<p>As explained elsewhere on this site, the energy footprint of our applications is directly proportional to visitor numbers, so one smart decision by us can result in massive carbon savings for our application, with the added benefits of faster and cheaper overall performance. Most of the other prompts on this site are contingent on using less data: <strong>do this correctly, and the rest looks after itself!</strong></p>
+<p>We're using the term <strong>data budget</strong> here to describe any situation for which you can limit the volume of data used. The most common scenario for this metric involves what is often called the &quot;page weight&quot;, meaning the number of KB downloaded when a page is rendered. However, any part of your application that transmits data—such as any back-end processes that the user never sees—may benefit from the introduction of a data budget.</p>
+<p>There are many tools that can show the exact energy footprint of your application resulting from data usage:</p>
+<ul>
+<li><a href="https://theshiftproject.org/en/carbonalyser-browser-extension/">The Carbonalyser browser extension</a></li>
+<li><a href="https://github.com/mlco2/codecarbon">CodeCarbon</a> - track emissions from compute</li>
+<li><a href="https://github.com/thegreenwebfoundation/co2.js">CO2.js</a> - a Javascript library for calculating bytes-to-carbon</li>
+<li><a href="https://github.com/thegreenwebfoundation">Various tools by the Green Web Foundation</a></li>
+<li><a href="https://github.com/ai/size-limit/">NPM Size Limit</a> - a tool to monitor NPM bundle size limits</li>
+</ul>
+<p>These let you choose a data budget strategy and then <strong>enforce it through automation</strong>. Doing this needn't be a massive overhead for your team ; simply install the tooling, check what your current page weight or bundle size is, add 10%, and that's your initial budget. You can then work towards reducing that budget over time, and—more importantly—making sure you never exceed it without <strong>making the conscious decision to do so</strong>.</p>
+<h2 id="setting-a-page-weight"><a class="header" href="#setting-a-page-weight">Setting a page weight</a></h2>
+<p>You can see what the internet average page weight is using the <a href="https://httparchive.org/reports/page-weight">page weight report tool</a> from <em>httparchive</em>. This lets you break down page weights by type and by date. For example, in 2021 the average web page for the top 100,000 sites on the internet measured approximately 1700KB, of which 540KB were images and 570KB was JavaScript (these are typically the biggest areas for improvement). <strong>You can be as granular as you want to be</strong> with your own page weight budgets, either setting a weight limit for the whole page, or setting individual budgets for different aspects of the page (such as an image data budget, a CSS data budget, etc.)</p>
+<h2 id="alternative-set-a-story-weight"><a class="header" href="#alternative-set-a-story-weight">Alternative: Set a &quot;story weight&quot;</a></h2>
+<p>Sometimes it won't make sense to use a page weight, so you might instead want to adopt a 'story weight' for your application by calculating the overall weight of a complete user journey, rather than doing it on a page-by-page basis. If we were running a shop, for example, we might choose stories (and budgets) like this;</p>
+<table><thead><tr><th>Story Name</th><th>Detail</th><th>Budget</th></tr></thead><tbody>
+<tr><td>Not what I was looking for!</td><td>User saw the home page and realised it's not what they wanted</td><td>400kb</td></tr>
+<tr><td>Just browsing</td><td>User comes to the site, looks at several products, then leaves</td><td>5MB</td></tr>
+<tr><td>I know what I want</td><td>User is looking for something specific, finds it, and buys it</td><td>4MB</td></tr>
+<tr><td>I want to talk to someone</td><td>User wants to ask a question or make a complaint</td><td>2MB</td></tr>
+</tbody></table>
+<p>This gives development teams incentive to consider user stories if they don't already, and to make your users' journeys through the application as efficient as possible. Having a user get lost within an app—downloading hundreds of bytes worth of images they don't need in the process—is not only bad for the environment, it's also a bad user experience.</p>
+<h2 id="other-considerations"><a class="header" href="#other-considerations">Other considerations</a></h2>
+<ul>
+<li>If your company makes multiple apps, don't mandate company-wide page weight budgets. The nature of apps means that some will generate more carbon than others, so don't pit them against each other!</li>
+<li>Like many things, you can turn this into a game by giving teams incentive to shed page weight. Everyone enjoys a bit of code golf, right? Think of this as carbon golf!</li>
+<li>The team developing the app should be the one to pick the budget, since they know the app intimately and are best-placed to pick a sensible or realistic budget.</li>
+</ul>
+<h2 id="relevant-links"><a class="header" href="#relevant-links">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages">MDN article about page weight</a></li>
+<li><a href="https://web.dev/performance-budgets-101/">Web.dev Performance Budgets 101</a></li>
+<li><a href="https://almanac.httparchive.org/en/2020/page-weight#page-weight">HTTPArchive Web Almanac chapter on page weights</a></li>
+<li><a href="https://httparchive.org/reports/page-weight">HTTPArchive page weight report tool</a> - use this to compare your page weights to the internet average</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="support-browsers-sustainably"><a class="header" href="#support-browsers-sustainably">Support browsers sustainably</a></h1>
+<p>Choose a browser support strategy that is sustainable. At the most basic level, this should include a commitment to <strong>support the most modern versions</strong> of each browser and a limit for when you <strong>stop supporting older versions</strong>. The specifics of your browser support strategy are up to you, the main point is to make sure you <em>have</em> one.</p>
+<p>There are a few sustainability angles to this;</p>
+<ul>
+<li>Older browsers don't support sustainable techniques.</li>
+<li>Some browsers are more memory-intensive / power hungry than others.</li>
+</ul>
+<p>The following sections go into more detail on each of these points.</p>
+<h2 id="older-browsers-lack-support-for-sustainable-techniques"><a class="header" href="#older-browsers-lack-support-for-sustainable-techniques">Older browsers lack support for sustainable techniques</a></h2>
+<p>Many of the potential gains from sustainable web development depend on modern browser techniques, including:</p>
+<ul>
+<li><a href="https://caniuse.com/webp">Modern image format support</a>.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">Tags that serve images at appropriate sizes</a>.</li>
+<li><a href="https://caniuse.com/css-mediaqueries">CSS media queries</a>.</li>
+</ul>
+<p>By supporting older browsers (Notably Internet Exporer 11, Opera Mini, and any browser version released prior to 2018), you risk perpetuating unsustainable web practices.</p>
+<p>Perhaps you have commercial reasons for supporting these browsers; your marketing data may suggest a significant loss of custom if you cease support for older software. Also, since modern web applications are meant to be inclusive, you will probably need to accommodate people who find the prospect of upgrading or switching their browser software a daunting task.</p>
+<p>Despite what you may think, you are not truly helping your customers by enabling their continued use of outdated browsers (In the case of Internet Explorer, Microsoft have officially <a href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/">withdrawn support</a>). Use of older browsers represents a very real security risk for your customers.</p>
+<p>You have a few options for such customers:</p>
+<ul>
+<li>Refuse to serve them until they upgrade.</li>
+<li>Continue to cater for them, but encourage them to upgrade their browser. There are <a href="https://browser-update.org/">tools available</a> to help you do this.</li>
+</ul>
+<h2 id="dont-force-users-to-use-a-particular-browser"><a class="header" href="#dont-force-users-to-use-a-particular-browser">Don't force users to use a particular browser</a></h2>
+<p>Websites often advise people to install a particular browser for &quot;the best experience&quot;. Sometimes this advice is well-intentioned, and encourages customers to upgrade and use any popular, modern browser. Tooling and algorithms continually strive to be more efficient, so embracing modern software typically results in longer battery life and a better user experience.</p>
+<p>Conversely, developers might encourage people to use a specific browser because they don't intend to support the others. As a developer who does this, you must weigh any productivity gains from reduced support requirements against the impact of people being forced to use browsers that consume more resources (and hence more power) than others you don't want to support. Chrome, for example, is an otherwise excellent browser that is frequently <a href="https://www.makeuseof.com/tag/chrome-using-much-ram-fix-right-now/">called out as being very memory hungry</a>.</p>
+<h2 id="relevant-links-1"><a class="header" href="#relevant-links-1">Relevant Links</a></h2>
+<ul>
+<li><a href="https://caniuse.com/">Can I use?</a> - a comprehensive reference of browsers and the web technologies they support.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="curate-features-responsibly"><a class="header" href="#curate-features-responsibly">Curate features responsibly</a></h1>
+<p>Deprecate features that users are not making use of, especially if they are resource intensive. Just because a feature is &quot;cool&quot; does not mean it is also necessary. By maintaining resource-heavy features that your customers are not using, you may be forcing them to download data un-necessarily. Even if the feature can't be deprecated, there may be other ways of achieving the same funcionality at a fraction of the cost.</p>
+<h2 id="example-mapping-functionality"><a class="header" href="#example-mapping-functionality">Example: Mapping functionality</a></h2>
+<p>A classic example of a feature that many sites include needlessly is an interactive map, with the de-facto solution being to use <a href="https://www.google.com/maps">Google Maps</a>.</p>
+<p>Google Maps is an excellent resource and easily ranks the most fully featured mapping platform in the world... however, at time of writing it is much more data intensive than alternatives such as <a href="https://leafletjs.com/">Leaflet</a>. You can choose which tile set Leaflet uses under the hood but a common option is the <a href="https://www.openstreetmap.org/">OpenStreetMap</a> which is a worldwide collaborative effort to map the world, similar in principle to a wiki.</p>
+<p>You can confirm which solution is more data intensive from the network tab of your browser's developer tools - you should see as you interact with a google map that you have much more data being requested by Google Maps than by leaflet (which, at least when I tried this, requested nothing but the new tiles).</p>
+<p>There will, of course, be times when you absolutely need to use Google Maps because either you need some of that library's functionality OR you need to do mapping in a part of the world where Google has better data... however, often developers will just default to Google Maps without considering alternatives.</p>
+<p>In addition to considering alternative technologies, have you considered not having any mapping funcitonality at all? Maps look absolutely fantastic, but if all that funcitonality is doing is displaying an overhead view of your customer's shop, could you get away with just using a static image? If it's important that users are able to scroll around / interact with the map, how about providing a link to the mapping provider rather than hosting the mapping content yourself? That way, the data cost of displaying and running a map is only paid for by the customers who actually use that feature. If you are absoultely certain that you want a map to appear in-line on your app, consider hiding the feature behind an opt-in mechanism like a button or accordian and only serving the required resources and data to users that activate the feature.</p>
+<h2 id="measuring-feature-usage"><a class="header" href="#measuring-feature-usage">Measuring feature usage</a></h2>
+<p>If you are lucky enough to work on an application where you actually get to speak to your customers - ask them about older / resource intensive features. Often people will get very attached to features (especially cool ones!) and deprecating them reduce an application's energy footprint can be a difficult conversation, so you might want to go armed with some statistics demonstrating that a feature is or is not being used.</p>
+<p>One way of figuring out usage is via analytics. There are a number of analytics platforms out there that can provide usage data, allowing you to see which features and pages are/aren't being used - popular choices include <a href="https://analytics.google.com/analytics/web">Google Analytics</a> and <a href="https://matomo.org/">Matomo</a>. These platforms allow you to collect anonymous usage data to let you see how your users are interacting with the application. As well as broad statistics such as page visits and journeys, both of these platforms offer fine grained control over the metrics that are collected, allowing you to track custom interactions with individual buttons and controls.</p>
+<p>Whilst extremely useful, developers should use these platforms with caution. Currently in the EU and the UK, there are certain <a href="https://ico.org.uk/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies/">legalities around the use of analytics</a> on websites which require you to inform your users when you are collecting these kinds of metrics and invite them to either opt out or leave the site (even if that collect is done anonymously!). In addition to the negative impact on user experience, <strong>having these kinds of analytics platforms installed increases the energy footprint of your application</strong> because it means you will be sending additional data over the internet. You should only use analytics platforms if you are making active and efficient use of the metrics that are being collecting.</p>
+<h2 id="relevant-links-2"><a class="header" href="#relevant-links-2">Relevant Links</a></h2>
+<ul>
+<li><a href="https://www.google.com/maps">Google Maps</a> - A popular mapping platform</li>
+<li><a href="https://leafletjs.com/">Leaflet</a> - An open source equivalent to Google Maps.</li>
+<li><a href="https://analytics.google.com/analytics/web">Google Analytics</a> - A popular analytics platform for measuring user behavior.</li>
+<li><a href="https://matomo.org/">Matomo</a> - an open source equivalent to Google Analytics.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="styles"><a class="header" href="#styles">Styles</a></h1>
+<p>The following prompts all relate to either stylistic or design choices that you might make when creating a web application.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="create-print-specific-styles"><a class="header" href="#create-print-specific-styles">Create print-specific styles</a></h1>
+<p>Have you thought about whether your users will ever print your content onto physical paper? Use <em>print specific styles</em> to apply certain styles only when a page is printed. This allows you to tailor the look of the content to the printed medium whilst also disabling certain sections or elements where it makes no sense for them to be printed at all. Doing so conserves electricity, paper and ink.</p>
+<h2 id="use-cases-for-a-print-stylesheet"><a class="header" href="#use-cases-for-a-print-stylesheet">Use cases for a print stylesheet</a></h2>
+<p>Printing out large areas of solid color can use a <em>lot</em> of printer ink, so most modern browsers will automatically disable the printing of background images and background colors. In some cases this can lead to the printed page losing some of its brand identity, or some elements looking strange becoming unreadable - adding a print stylesheet allows you to correct some of this.</p>
+<p>What you use print styles for is very case-specific and it might be that you decide that users are very unlikely to ever print out your application and that none of this is therefore a concern for you. Here are a few ideas to give you a flavour for the kind of thing that they are commonly used to fix or adjust;</p>
+<ul>
+<li><strong>Making text visible</strong> - If you had a block of pure white text on a dark background, the browser may remove the background, making the text unreadable.</li>
+<li><strong>Maintaining brand identity</strong> - your brand might have specific guidelines for how things like logos are displayed when they are black and white.</li>
+<li><strong>Disabling superflous elements</strong> - This might include elements which are not relevant to the content such as headers, navigation, sidebars and footers, but also interactable elements such as buttons and forms - none of which provide any value once printed. Take the example of a recipe website - if someone is printing that page, they probably don't need to print all the links to other recipes you might have placed around the recipe itself.</li>
+<li><strong>Fixing layouts</strong> - most modern websites are built mobile-first and responsive, meaning that a layout should be able to adapt to whatever viewport size it is applied to (paper or otherwise) - however if that is <em>not</em> the case with your application then it might be that your layout prevents the content from being printed in portrait mode.</li>
+</ul>
+<h2 id="how-to-create-a-print-stylesheet"><a class="header" href="#how-to-create-a-print-stylesheet">How to create a print stylesheet</a></h2>
+<p>It might be that your application/site works just fine when printed without you having to do anything - you can verify what your page will look like when printed simply by using the <em>print preview</em> functionality within your browser. If it does turn out that you need to apply some print styles, there are a number of ways to do this;</p>
+<h3 id="method-1-create-a-seperate-print-media-stylesheet"><a class="header" href="#method-1-create-a-seperate-print-media-stylesheet">Method 1: Create a seperate print-media stylesheet</a></h3>
+<p>Add a stylesheet using the <code>&quot;media&quot;=&quot;print&quot;</code> attribute when the sheet is included;</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; media=&quot;print&quot; href=&quot;styles/print.css&quot;/&gt;
+</code></pre>
+<p>Styles specified by that stylesheet will now only be applied to pages when they are printed.</p>
+<h3 id="method-2-using-media-queries"><a class="header" href="#method-2-using-media-queries">Method 2: Using media queries</a></h3>
+<p>You can put print-specific styles directly into your existing stylesheets using media queries. You can differentiate print and screen styles using the following syntax;</p>
+<pre><code>@media screen {
+// screen styles go here
+}
+
+@media print {
+// print styles go here
+}
+</code></pre>
+<p>You can also apply logical operators <code>not</code> or <code>only</code> to your media queries if it makes sense to specify things that way;</p>
+<pre><code>@media not print {
+  // styles not to be applied to print go here
+}
+</code></pre>
+<p>Note that if you do this, ensure that you are not including a <code>media</code> attribute when you actually include the stylesheet on the page or this will override these settings.</p>
+<h3 id="method-3-leverage-the-capabilities-of-a-css-library-or-framework"><a class="header" href="#method-3-leverage-the-capabilities-of-a-css-library-or-framework">Method 3: Leverage the capabilities of a CSS library or framework</a></h3>
+<p>If you are using a CSS library or framework, it is possible that the authors have already made some print-related considerations and created functionality or documentation to help you work with these styles;</p>
+<ul>
+<li><a href="https://tailwindcss.com">TailwindCSS</a> documents how you can use the media query functionality <a href="https://tailwindcss.com/docs/breakpoints#styling-for-print">within its config files</a> to style for print.</li>
+<li><a href="https://getbootstrap.com/">BootStrap</a> provides special <a href="https://getbootstrap.com/docs/4.0/utilities/display/#display-in-print">utility classes</a> specifically for print styling.</li>
+</ul>
+<p>Always consult the documentation for your library or framework before trying to figure out novel solutions on your own.</p>
+<h2 id="paged-media-properties"><a class="header" href="#paged-media-properties">Paged media properties</a></h2>
+<p>It might be that your particular use case falls into the category of being &quot;very likely&quot; to be printed. If this is the case, there are a number of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Paged_Media">paged media-specific CSS styles</a> that can be applied to elements in order to achieve the exact printed look that you want for your content. These include;</p>
+<ul>
+<li>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@page"><code>@page</code></a> media query for per-printed-page styles (normally for things like margins) - also includes support for pseudo selectors such as <code>:first</code> (to target only the first page) and <code>:left</code>/<code>:right</code> to target pages that would only appear on the left/right (depending on the major writing direction for the document).</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/break-before">Page Breaks</a> to allow content to be spread across multiple pages more logically.</li>
+<li>There is also support for more technical typographical concpets such as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/orphans">orphans</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/widows">widows</a>.</li>
+</ul>
+<h2 id="relevant-links-3"><a class="header" href="#relevant-links-3">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">MDN page on media css @ rule</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-media">MDN page on the media attribute</a></li>
+<li><a href="https://www.smashingmagazine.com/2018/05/print-stylesheets-in-2018/">Smashing Magazine article on print stylesheets</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="employ-responsive-design"><a class="header" href="#employ-responsive-design">Employ responsive design</a></h1>
+<p>Use media queries to create a responsive web application. People are no longer simply uing traditional laptops and desktop computers to consume web applications - the use of devices such as mobile phones, tablets and televisions is now commonplace. As a result, we no longer live in a &quot;one size fits all&quot; world when it comes to designing user experiences. Serving the full-fat version of your web application to your users will not only result in a poor user experience, it may also result serving them a lot more data than they need to, increasing the energy footprint of your application.</p>
+<h2 id="media-queries"><a class="header" href="#media-queries">Media Queries</a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a> are <a href="https://caniuse.com/css-mediaqueries">supported across all major browsers</a> and have been for some time. They allow you to detect certain properties of the device consuming the application, such as whether it has a color screen or (in the case of phones) whether it is oriented landscape or portrait. The feature that media queries are perhaps most famous for though is their ability to detect the width and height of a device's viewport and apply styles accordingly;</p>
+<pre><code>@media (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+</code></pre>
+<p>Using media queries allows developers to have their applications &quot;adapt&quot; to the viewport, serving lighter versions of their applications which perform better on mobile devices (conserving battery and thus saving carbon) and in some cases can wholesale avoid downloading some of the larger presentational assets altogether. Whilst your huge, striking hero or header image might look great on a desktop application, a mobile user might not appreciate the additional bandwidth cost they are having to pay for an image that is ultimately going to be reized to fit their viewport anyway.</p>
+<p>There is a big UX angle to this too: desktops and laptops provide you with a lot of horizontal space and allow you to apply column-based layouts which mobiles do not, and certain elements such as menus and navigation may need to be replaced entirely on mobile devices for usability reasons.</p>
+<h2 id="images"><a class="header" href="#images">Images</a></h2>
+<p>One common &quot;gotcha&quot; with regards to images and media queries is that whilst behavior across browsers will vary, simply adding a <code>display: none</code> css property to an image will often <em>not</em> prevent your browser from downloading that image (you can confirm this using your browser's developer tools). This means that the user still pays the download cost (and the carbon cost) of the image even though they never see it.</p>
+<p>There are a number of ways around this:</p>
+<h3 id="approach-1-make-the-image-a-background-image"><a class="header" href="#approach-1-make-the-image-a-background-image">Approach 1: Make the image a background image</a></h3>
+<p>Most browsers will not download an image if you use a css background image rather than an image tag;</p>
+<pre><code>&lt;!-- this will still download the image --&gt;
+&lt;img style=&quot;display: none&quot; src=&quot;foo.png&quot; alt=&quot;a picture!&quot; /&gt;
+
+&lt;!-- in most browsers, the image will not be downloaded --&gt;
+&lt;div style=&quot;display: none; background-image: url('foo.png');&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>Don't simply default to using this approach for all images!</strong> The two elements above are <em>not</em> equivalent - the <code>img</code> tag expressly indicates to the user's browser that the image is semantically important to the content, the <code>div</code> does not. This is important from an accessibility perspective because using an image tag allows you to specify things like <code>alt</code> text which will be read out to screen reader users and displayed to anyone who for some reason cannot download the image. This advice works both ways: if an image is purely used for <em>presentational</em> purposes (e.g. as a background to your site header) then it is not semantically important and <code>background-image</code> should be used regardless of what you are doing with media queries - a screen reader user does not need to know that you have a lovely leafy image on the background of your header!</p>
+<h3 id="approach-2-use-the-lazy-loading-attribute"><a class="header" href="#approach-2-use-the-lazy-loading-attribute">Approach 2: Use the <code>lazy</code> loading attribute</a></h3>
+<p>Some browsers will respect the <code>lazy</code> attribute with regards to CSS <code>display: none</code> only load images when they become visible to the user. For more details on this approach see our chapter on Lazy Loading images.</p>
+<h3 id="approach-3-use-the-picture-element"><a class="header" href="#approach-3-use-the-picture-element">Approach 3: Use the <code>picture</code> element</a></h3>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"><code>picture</code></a> element is relatively well supported across browsers and allows you to specify which images to load based on media queries, meaning you can provide several versions of an image and allowing your browser to select the appropriate version:</p>
+<pre><code>&lt;picture&gt;
+    &lt;source srcset=&quot;/small.jpg&quot; media=&quot;(min-width: 480px)&quot; /&gt;
+    &lt;source srcset=&quot;/medium.jpg&quot; media=&quot;(min-width: 1000px)&quot; /&gt;
+    &lt;img src=&quot;/large.jpg&quot; alt=&quot;An image&quot; /&gt;
+&lt;/picture&gt;
+</code></pre>
+<p>The browser will only ever download one of the images, meaning you can serve different sizes for different viewports.</p>
+<h2 id="design-mobile-first"><a class="header" href="#design-mobile-first">Design Mobile First</a></h2>
+<p>Prior to media queries, it was commonplace for developers to make <em>two versions</em> of their application (one for standard desktops, one for mobile) They would achieve this using the request's <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">user agent property</a> to figure out whether the request came from a mobile device or not. The rate of change within the mobile market along with the advent of popular tablet devices meant that this approach lasted only a few years before its inability to scale became a hinderance.</p>
+<p>Aside from the scalability issue, designing for the desktop first and &quot;cutting back&quot; for mobile is actually a lot more difficult to do because it means that in order to get started on a project, you need to start with the most advanced version of the design and &quot;degrade gracefully&quot; into the more simple version (the mobile version) afterwards. Starting with a mobile design allows us to do the opposite of this: to &quot;progressively enhance&quot;. This is not only much easier and quicker, but it also ensures that we do not end up neglecting our mobile users (who are no longer an insignificant portion of our users - figures currently show <a href="https://css-tricks.com/how-to-develop-and-test-a-mobile-first-design-in-2021/">mobile traffic contributing 52% of all internet traffic</a>!</p>
+<h2 id="relevant-links-4"><a class="header" href="#relevant-links-4">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">MDN Page about Media Queries</a></li>
+<li><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSSTricks guide to common device viewport sizes</a></li>
+<li><a href="https://css-tricks.com/how-to-develop-and-test-a-mobile-first-design-in-2021/">CSSTricks article about mobile first development</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="use-webfonts-responsibly"><a class="header" href="#use-webfonts-responsibly">Use webfonts responsibly</a></h1>
+<p>Use web fonts responsibly and lean towards using only natively supported fonts if possible. Whilst modern browsers support many built in system fonts, using web fonts allows you to download and use specific fonts from directly within your application's CSS. This feature been <a href="https://caniuse.com/fontface">supported across all major browsers</a> for a very long time (as far back as Internet Explorer 6) and there are a few reasons you might want to use it for your application.</p>
+<ul>
+<li>A particular font might be very important to your brand identity or a major stylistic choice for your application.</li>
+<li>It might be very important that the site looks exactly the same across all browsers and operating systems (some native fonts are only available on certain operating systems, for example the <a href="https://en.wikipedia.org/wiki/Tahoma_(typeface)">Tahoma</a> font is Microsoft-developed and therefore <a href="https://wiki.debian.org/tahoma">not available in some Linux distros</a>).</li>
+</ul>
+<p>Including web fonts does require your users to <em>download an additional and not-insignificant amount of extra data</em>, increasing your site's energy footprint.</p>
+<h2 id="using-web-web-fonts"><a class="header" href="#using-web-web-fonts">Using web web fonts</a></h2>
+<p>Web fonts are downloaded using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"><code>@font-face</code></a> css rule. This supports several types of file formats including <code>woff2</code>, <code>TrueType</code> and <code>svg</code>.</p>
+<pre><code>@font-face {
+  font-family: &quot;myAwesomeFont&quot;;
+  src: url(&quot;myAwesomeFont.woff2&quot;);
+}
+</code></pre>
+<p>Content Delivery Networks (CDNs) such as <a href="https://fonts.google.com/">google fonts</a> will often provide all of the supporting CSS for you, making it very simple to include the font in your application.</p>
+<h2 id="its-perfecty-fine-to-use-webfonts"><a class="header" href="#its-perfecty-fine-to-use-webfonts">It's perfecty fine to use Webfonts</a></h2>
+<p>This prompt is <strong>not</strong> reccomending that you avoid web fonts, only that you use them responsibly and with your eyes open to the data cost. Don't simply choose to use webfonts on a whim - make it a <em>conscious and confident choice</em> and factor the extra download cost into your page weight budget.</p>
+<p>If you do decide that you are going to use web fonts, there are a number of things you can do in order to reduce the data cost;</p>
+<ul>
+<li><strong>Use a CDN</strong> - Serving web fonts from a a CDN such as <a href="https://fonts.google.com/">google fonts</a> carries a number of benefits - chief among these being smart caching. Users may have already downloaded the font from elsewhere on the internet and have it stored locally, and any fresh downloads will likely have been cached closer to the user's location.</li>
+<li><strong>Only download what you need</strong> - Some web fonts come with multiple variants (e.g. multiple font weights). You should only download what you are actually using.</li>
+<li><strong>Consider images</strong> - If you are only using webfonts in one place (e.g. the header/logo) then consider using an image with <code>alt</code> text instead - the data cost of downloading an image might end up being smaller than the cost of downloading a web font.</li>
+<li><strong>Consider using webfonts only for titles and headings</strong> - The difference in appearance may be negligable at smaller sizes and reserving web fonts to only titles would mean you could download less variants.</li>
+</ul>
+<h2 id="relevant-links-5"><a class="header" href="#relevant-links-5">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts">MDN page about web fonts</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">MDN page about the <code>@font-face</code> css rule</a></li>
+<li><a href="https://caniuse.com/fontface">Caniuse page about web fonts</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frontend-code"><a class="header" href="#frontend-code">Frontend Code</a></h1>
+<p>The following prompts all relate to the code that you run on your client applications. Typically this will be JavaScript, however as of 2022 there are multiple alternatives available in the form of transpilers that use JavaScript as a target (such as CoffeeScript or, more popularly, Typescript). We are also seeing technologies such as webassembly being adopted which allow efficient, near-native compute to occur on client devices.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="choose-appropriate-libraries"><a class="header" href="#choose-appropriate-libraries">Choose appropriate libraries</a></h1>
+<p>When choosing a frontend framework, explore the alternatives rather than just defaulting to the framework you know or the one that is most popular. Other frameworks may offer smaller, less CPU-intensive alternatives that help conserve batteries and save on data over the wire.</p>
+<h2 id="react-might-not-always-be-the-right-choice"><a class="header" href="#react-might-not-always-be-the-right-choice">React might not always be the right choice</a></h2>
+<p>To cut straight to the chase: many developers will still just use <a href="https://reactjs.org/">React</a> for everything. In 2022, the React library dominates the UI landscape in terms of <a href="https://www.npmtrends.com/angular-vs-react-vs-vue">adoption</a> and is supported by a huge ecosystem of components and plugins, however you should not simply default to choosing it because it is popular. Weight up the pros and cons of the alternatives and make an informed choice. React is an excellent library, but there are</p>
+<h2 id="for-people-who-really-like-react"><a class="header" href="#for-people-who-really-like-react">For people who really like React</a></h2>
+<p>Consider <a href="https://preactjs.com/">Preact</a>.</p>
+<p>If you are very attached and bought-in to React or its ecosystem, consider trialling <strong>Preact</strong>. It aims to maintain parity with React in terms of its API (there are <a href="https://preactjs.com/guide/v10/differences-to-react">a few differences</a> but nothing major) which means you can try it out simply by using <a href="https://preactjs.com/guide/v10/switching-to-preact">bundler aliases</a>. React and React-DOM combined deploy a runtime that clocks in at around 140kb out of the box (you can get it as low as 40kb if you go to town on optimisation) - you pay that data cost before you write a single line of your own code, simply by choosing React. The runtime for Preact, by comparison, clocks in at just over 3kb.</p>
+<h2 id="for-people-who-are-happy-to-learn-a-new-library"><a class="header" href="#for-people-who-are-happy-to-learn-a-new-library">For people who are happy to learn a new library</a></h2>
+<p>Consider <a href="https://svelte.dev/">Svelte</a></p>
+<p>The battle lines are constantly shifting in terms of runtime sizes, so it's impossible to say which library, at time of writing, has the smallest runtime... or is it? With its revolutionary approach, <strong>Svelte</strong> presents a new way of thinking about frontend libaries by presenting a compiler-based approach, therefore shipping no runtime at all to the client.</p>
+<p>Svelte has also abandoned the virutal DOM approach that dominated the current generation of Javascript frameworks. The Virtual DOM point is an important one from a sustainability perspective because in and of itself it brings no advantages, it's <a href="https://svelte.dev/blog/virtual-dom-is-pure-overhead">simply a means to an end</a> and causes your client to perform un-necessary work.</p>
+<p>Many frontend developers today are already treating their frameworks as if they were compilers (building from the command line, deploying minified artefacts) but are not getting any of the benefits! This is why many people believe that Svelte (along with its contemporaries such as <a href="https://www.solidjs.com/">SolidJS</a>) represent the next generation of JavaScript libraries.</p>
+<h2 id="maybe-you-dont-even-need-a-framework"><a class="header" href="#maybe-you-dont-even-need-a-framework">Maybe you don't even need a framework?</a></h2>
+<p>It is possible, after a time, to get a bit too close to the forest when it comes to frontend development and to forget that it is possible to get things working without using a framework at all. If you can achieve what you need to simply by using plain old JavaScript, and you don't need to worry about scaling up, why not just do that? The data and CPU savings might be huge.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="import-efficiently"><a class="header" href="#import-efficiently">Import efficiently</a></h1>
+<p>Ensure that you're importing modules efficiently. You might be unknowingly increasing your build times and serving your users a ton of JavaScript that will never be executed, increasing the energy footprint of your website.</p>
+<h2 id="example-importing-lodash"><a class="header" href="#example-importing-lodash">Example: Importing Lodash</a></h2>
+<p><a href="https://lodash.com/">Lodash</a> is a popular utility library which provides a collection of useful functions for working with JavaScript. You would be correct in thinking that the following import strategy would be wasteful because it would import the whole Lodash library, even if you are only using a small part of it:</p>
+<pre><code>import _ from &quot;lodash&quot;;
+console.log(_.capitalize(&quot;hello world&quot;));
+</code></pre>
+<p>Where many people go wrong though, is in the belief that the following code solves this problem;</p>
+<pre><code>import { capitalize } from &quot;lodash&quot;;
+console.log(capitalize(&quot;hello world&quot;));
+</code></pre>
+<p>In fact, <strong>this is not true</strong>. Both of the above two imports will result in the entire <code>lodash</code> library being imported into your bundle and served to the user. It is possible for bundlers such as webpack to <a href="https://webpack.js.org/configuration/optimization/">use tree-shaking to throw away dead code</a>, however this feature is normally turned off by default (the reason being that the module may have side-effects that run on import, so it's not safe just to throw code away without asking!).</p>
+<p>So what is the solution? In the case of Lodash, the developers have split their functionality up into <em>categories</em> and you can reduce your bundle size by importing only from the category you are using:</p>
+<pre><code>import { capitalize } from &quot;lodash/string&quot;;
+</code></pre>
+<p>Alternatively for an even smaller bundle you can import only the particular function you are using:</p>
+<pre><code>import capitalize from &quot;lodash/capitalize&quot;;
+</code></pre>
+<h2 id="prevention"><a class="header" href="#prevention">Prevention</a></h2>
+<p>Whilst the above example is lodash-specific, the principle of importing efficiently holds true for any module you import. Unfortunately there is no &quot;one size fits all&quot; strategy for dealing with this issue as it depends very much on the implementation of the module you are importing - popular UI component library <a href="https://mui.com/">MUI</a>, for example, has <a href="https://mui.com/guides/minimizing-bundle-size/">a completely different approach to minimizing bundle sizes</a>.</p>
+<p>There is therefore no single thing you can do which will cover off all of your imports, but one thing you <em>can</em> do is ensure that you are no longer making assumptions about what does/doesn't make things more efficient through the use of <strong>tools</strong>.</p>
+<p>One such tool is the <a href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost">Import Cost VSCode extension</a> by Wix. Install this into your editor and it will display the import cost for each module in your codebase. This means you will never make assumptions about what is/isn't an efficient import ever again!</p>
+<h2 id="relevant-links-6"><a class="header" href="#relevant-links-6">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">MDN pages covering ES6 imports</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking">Google article about Tree Shaking</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="content"><a class="header" href="#content">Content</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="keep-content-concise"><a class="header" href="#keep-content-concise">Keep content concise</a></h1>
+<p>Try to front-load your content, and keep it concise and to the point. The days of packing a page with words purely for SEO are over, and doing so now may actually <a href="https://developers.google.com/search/docs/beginner/seo-starter-guide">harm your SEO</a>.</p>
+<p>As well as being a good way to engage your users, there are a few sustainability angles to this:</p>
+<ul>
+<li>Padding content increases page load times and data sent over the wire.</li>
+<li>In being forced to read excessive text to find something, users are likely to spend longer than necessary on your site, which may reduce their desire to engage or return.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lazy-load-content"><a class="header" href="#lazy-load-content">Lazy load content</a></h1>
+<p>If possible, try to avoid loading content before it is meant to appear in the active viewport. This applies to content hidden behind a component, or located several page lengths outside the viewport.</p>
+<h2 id="common-solutions"><a class="header" href="#common-solutions">Common Solutions</a></h2>
+<ul>
+<li>Pagination is a simple way to avoid loading hundreds of items on a single page.</li>
+<li>'Infinite Scroll' is a popular solution, but beware of accessibility pitfalls associated with this kind of solution.</li>
+</ul>
+<h2 id="relevant-links-7"><a class="header" href="#relevant-links-7">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">MDN article on Lazy Loading</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="avoid-excessive-markup"><a class="header" href="#avoid-excessive-markup">Avoid excessive markup</a></h1>
+<p>Always try to avoid superflous markup, in particular you should avoid adding DOM elements to achieve a particular look or style when there are CSS-based alternatives. Having an overly-busy DOM will affect <a href="https://web.dev/dom-size/">runtime performance and page speed</a>, as well as contributing to more data being sent to clients. In addition to this, your browser will have to work harder when querying and manipulating a busy DOM, leading to additional battery drain, whilst at the same time harming SEO and accessibility.</p>
+<h2 id="an-example"><a class="header" href="#an-example">An example</a></h2>
+<p>Consider a form label, which will default to being an <code>inline</code> element. This means that when rendered, the label will appear to the left of any subsequent input element;</p>
+<div className="text-center p-4 border-2 border-grey-300 mb-2">
+  <label htmlFor="my-input">Enter some text:</label>
+  <input type="text" id="my-input" name="my-input" />
+</div>
+<pre><code>&lt;label for=&quot;my-input&quot;&gt;Enter some text:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;my-input&quot; name=&quot;my-input&quot; /&gt;
+</code></pre>
+<p>Now lets say you wanted that label to instead appear <em>above</em> the form element. Inexperienced web developers may default to trying to achieve this with markup, such as the line break tag (<code>br</code>) or by adding <code>div</code> elements;</p>
+<pre><code>&lt;!-- using a line break --&gt;
+&lt;label for=&quot;my-input&quot;&gt;Enter some text:&lt;/label&gt;
+&lt;br /&gt;
+&lt;input type=&quot;text&quot; id=&quot;my-input&quot; name=&quot;my-input&quot; /&gt;
+
+&lt;!-- using div elements --&gt;
+&lt;div&gt;
+  &lt;label for=&quot;my-input&quot;&gt;Enter some text:&lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;input type=&quot;text&quot; id=&quot;my-input&quot; name=&quot;my-input&quot; /&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Whilst both of these approaches would achieve the desired <em>look</em>, they both involve adding elements to the DOM which do not need to be there. The same style can be achieved using CSS alone, for example by making the label a <code>block</code> level element and adjusting its alignment.</p>
+<div className="text-center p-4 border-2 border-grey-300 mb-2">
+  <label id="syled-label" htmlFor="my-input" style={{ display: "block" }}>
+    Enter some text:
+  </label>
+  <input id="styled-input" type="text" name="my-input" />
+</div>
+<pre><code>&lt;label style=&quot;display:block&quot; id=&quot;syled-label&quot; for=&quot;styled-input&quot;&gt;Enter some text:&lt;/label&gt;
+&lt;input id=&quot;styled-input&quot; type=&quot;text&quot; name=&quot;styled-input&quot; /&gt;
+</code></pre>
+<p>HTML can be minified only by removing whitespace, whereas you will achieve better compression on css because classes and selectors can be programatically obfuscated and optimised - this means that if you default to css, you'll probably end up sending less data to the user.</p>
+<h2 id="so-youre-saying-never-add-markup-just-to-achieve-a-style"><a class="header" href="#so-youre-saying-never-add-markup-just-to-achieve-a-style">So you're saying NEVER add markup just to achieve a style?</a></h2>
+<p>Definitely not - there will be some cases where, in order to achieve a particular style, you <em>will</em> need to add some additional markup. <a href="https://mui.com/">Material UI</a>, for example, adds an extra <code>span</code> element to achieve the famous <a href="https://mui.com/components/buttons/">ripple effect</a> on elements such as buttons.</p>
+<p>There may even be rare cases where the amount of CSS required to achieve a particular style is massive, and you'd end up spending <em>more</em> data than you would if you just added a new element. The trick is just to be pragmatic and make your choices with your eyes open to the cost of your decisions.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="use-semantic-markup"><a class="header" href="#use-semantic-markup">Use semantic markup</a></h1>
+<p>Where possible, always try to use native browser elements for your web content. Reaching straight for widgets and plugins will lead to an increased bundle size and possibly an <a href="/prompts/no-excessive-dom">Excessive DOM</a>. This will mean <a href="https://web.dev/dom-size/">your browser has to work harder</a> on queries whilst also increasing the amount of data you are sending over the wire - both of which contribute to an increased energy usage and battery drain.</p>
+<h2 id="semantic-markup"><a class="header" href="#semantic-markup">Semantic Markup</a></h2>
+<p>Today, the web platform provides a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">wide range of HTML elements</a> for you to use when creating content for the web. Having a healthy working knowledge of these tags is undeniably useful, but even the most experienced web developers can still encounter tags and features that they've never used before or didn't know existed.</p>
+<p>Did you know, for example, that there is a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date"><code>date</code> input</a> that is natively supported accross <a href="https://caniuse.com/input-datetime">all major browsers</a>? And that it can be styled to suit your application?</p>
+<div className="text-center p-4 border-2 border-grey-300 mb-2">
+  <label htmlFor="my-date">Pick a Date:</label>
+  <input type="date" id="my-date" name="my-date" defaultValue="2021-09-30" />
+</div>
+<pre><code>&lt;label for=&quot;my-date&quot;&gt;Pick a Date:&lt;/label&gt;
+&lt;input type=&quot;date&quot; id=&quot;my-date&quot; name=&quot;my-date&quot; value=&quot;2021-09-30&quot; /&gt;
+</code></pre>
+<p>Whilst using semantic markup <a href="https://www.hassellinclusion.com/blog/input-type-date-ready-for-use/">does not always mean you are safe</a> from an accessibility perspective, using semantic markup will normally get you most if not all of the way towards being inclusive and is strongly encouraged. Any shortcomings in screen reader browser support are likely to become better over time, meaning that using semantic markup is also an effective way of future-proofing your site.</p>
+<h2 id="widgets-components-and-plugins"><a class="header" href="#widgets-components-and-plugins">Widgets, Components and Plugins</a></h2>
+<p>If you do reach a point where you have exhausted all native browser options, you may find that it's time to reach out to the open source community to find an appropriate plugin/component. Javascript has a huge ecosystem and there is <a href="https://github.com/sorrycc/awesome-javascript">a lot of choice</a> - here are some things to look out for;</p>
+<ul>
+<li><strong>Evaluate the popular ones first</strong>. It's not all about github stars and npm downloads, but as a general rule the components with the most stars/downloads are normally the better ones, so start with those but don't just default to them.</li>
+<li>Check that the component you choose is <strong>accessible</strong> - they will normally state this in their documentation.</li>
+<li><strong>Don't use a sledgehammer to crack a nut</strong> - if a plugin provides 100 features and you only need one of them, you are probably going to be downloading (and serving to your users) a lot more code than they are actually using, contributing negatively to your page weight.</li>
+<li>Just because a component <em>looks</em> good doesn't mean it <em>is</em> good. Take a look at the markup the component generates before making a decision. Are there problems that could be fixed? Would this component be perfect if it just had one more feature? Consider getting involved with that component's development and submimtting a pull request to the creator. Just because a component doesn't do quite what you want it to does not mean that you need to always choose second best.</li>
+</ul>
+<p>There is an online convention known as <a href="https://github.com/sindresorhus/awesome">awesome lists</a> which you can use to browse your options. If you find (or create) a great component that is not on one of these lists, consider submitting a change request to get it added.</p>
+<h2 id="relevant-links-8"><a class="header" href="#relevant-links-8">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN list of HTML5 tags</a></li>
+<li><a href="https://github.com/sorrycc/awesome-javascript">Awesome Javascript</a> - A curated list of browser-side Javascript libraries and components.</li>
+<li><a href="https://github.com/brillout/awesome-react-components">Awesome React Components</a> - a curated list of React components.</li>
+<li><a href="https://github.com/vuejs/awesome-vue#components--libraries">Awesome Vue Components</a> - a curated list of Vue components.</li>
+<li><a href="https://github.com/brillout/awesome-angular-components">Awesome Angular Components</a> - a curated list of Angular components.</li>
+<li><a href="https://github.com/TheComputerM/awesome-svelte">Awesome Svelte Components</a> - a curated list of Svelte components.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="images-1"><a class="header" href="#images-1">Images</a></h1>
+<p>Images often make up the lions share of the resources a user needs to download when accessing a client application. This seciton covers some of the techniques you can use to alleviate this cost.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lazy-load-images"><a class="header" href="#lazy-load-images">Lazy load images</a></h1>
+<p>Defer the loading of images until they are within the active viewport. This avoids paying the data cost for images the user never sees.</p>
+<p>Lazy image loading used to be fiddly to implement, requiring an understanding of JavaScript. However, it is now <strong>natively supported</strong> across <a href="https://caniuse.com/loading-lazy-attr">all major browsers</a> and requires no programming knowledge. Simply assign the <code>&quot;lazy&quot;</code> property to the <code>loading</code> attribute of the <code>img</code> tag, e.g.</p>
+<pre><code>&lt;img loading=&quot;lazy&quot; src=&quot;/foobar.jpg&quot; alt=&quot;bar baz&quot; /&gt;
+</code></pre>
+<p>This change ensures the request for <code>foobar.jpg</code> is only sent if the image becomes visible to the user (either through the user scrolling to the image's location or if the image becomes un-hidden, perhaps by a CSS rule). This technique is supported by screen readers, and also works for <code>iframe</code> tags.</p>
+<p>Since this technique will degrade gracefully into older browsers, there is little reason to not use it. The behavior of this feature can vary between browsers, so you should make sure to test your assumptions and make sure your application is not erroneously sending off requests - you can do this using the <a href="https://developer.chrome.com/docs/devtools/network/">network section of your browser's developer tools</a>.</p>
+<h2 id="relevant-links-9"><a class="header" href="#relevant-links-9">Relevant Links</a></h2>
+<ul>
+<li><a href="https://caniuse.com/loading-lazy-attr">&quot;Can I use...&quot; entry for lazy attributes</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">MDN article on Lazy Loading</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="never-use-gifs"><a class="header" href="#never-use-gifs">Never use GIFs</a></h1>
+<p>Instead of animated GIFs, use the HTML5 <code>video</code> element to stream MP4 videos. The file size of a GIF can be quite large even for very short videos, and a near-identical effect can be achieved with a much smaller MP4 file. The following HTML will look exactly like a GIF to users, but is actually a muted MP4 set to play automatically and loop indefinitely.</p>
+<pre><code>&lt;video autoplay loop muted playsinline&gt;
+  &lt;source src=&quot;/media/video/my-video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+</code></pre>
+<p>The only way most users would realise this was a video is if they right-clicked it, at which point they might be thankful for the additional versatility of the format, including options to pause and rewind, view full-screen, or even &quot;cast&quot; the video to other devices.</p>
+<p>The video above was originally a GIF almost 2MB in size. After an <a href="https://cloudconvert.com/gif-to-mp4">online tool</a> was used to convert it into an MP4, the file's size dropped to less than 100k. Since video data will be <em>streamed</em> to the user and not downloaded in full like a GIF, the user only pays the data cost for what they actually view.</p>
+<p>Be aware that <strong>MP4 Videos do not support transparency</strong> like GIFs do; if transparency is required, consider a modern format with better compression such as WebP or AVIF, both of which support animation and transparency.</p>
+<p>Other things to consider:</p>
+<ul>
+<li>If you leave the video's controls enabled, users can decide whether to play it at all, helping them avoid unwanted data costs.</li>
+<li>Multiple <a href="https://en.wikipedia.org/wiki/HTML5_video#Supported_video_and_audio_formats">other video formats</a> are supported.</li>
+</ul>
+<h2 id="relevant-links-10"><a class="header" href="#relevant-links-10">Relevant Links</a></h2>
+<ul>
+<li><a href="https://caniuse.com/video">&quot;Can I use...&quot; entry for video</a></li>
+<li><a href="https://caniuse.com/mpeg4">&quot;Can I use...&quot; entry for mp4</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">MDN article on the video tag</a></li>
+<li><a href="https://www.smashingmagazine.com/2018/11/gif-to-video/">Smashing Magazine: GIF to Video</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resize-images-appropriately"><a class="header" href="#resize-images-appropriately">Resize images appropriately</a></h1>
+<p>Don't serve images that are bigger than they need to be. Larger images mean larger files, resulting in more data traffic. If possible, you should <strong>pre-resize the image</strong> on the server so the user's browser downloads it in an appropriate size.</p>
+<p>It is common in web development to have the browser render images in dimensions much smaller than those of the original file. This can be done using CSS or the <code>width</code> and <code>height</code> attributes of an image tag. At best, this means scaling by a few hundred pixels to help an image fit a given layout, but at worst it can mean images thousands of pixels in size being rendered as thumbnails.</p>
+<p>Such extreme rescaling forces users to pay the data cost of downloading an image they may never see at full size and, depending on the image's format, that cost can be steep. This is especially problematic for mobile devices, where smaller screens require smaller images, and users' data allowances might be limited and expensive.</p>
+<h2 id="resizing-images"><a class="header" href="#resizing-images">Resizing images</a></h2>
+<p>Resizing images need not be a tedious manual task; if you can identify images on your server that are larger than required, you can automate the resizing process. There are many tools available to help you do this, including <a href="https://imagemagick.org/index.php">ImageMagick</a>, which makes resizing images as easy as:</p>
+<pre><code>convert person.jpg -resize 64x64 person_thumb.jpg
+</code></pre>
+<p>ImageMagick also includes the <code>mogrify</code> command, which is similar to the <code>convert</code> command above but works on batches of images.</p>
+<h2 id="handling-different-sizes-for-different-viewports"><a class="header" href="#handling-different-sizes-for-different-viewports">Handling different sizes for different viewports</a></h2>
+<p>If you know your user's screen is only 500 pixels wide, you probably don't need to serve them huge image files. Historically there was no decent solution to this issue, but that is no longer the case. The HTML5 <code>picture</code> element can be used with media queries to ensure only appropriately sized images are requested, e.g.</p>
+<pre><code>&lt;picture&gt;
+    &lt;source srcset=&quot;/foo_500.jpg&quot; media=&quot;(min-width: 500px)&quot;&gt;
+    &lt;img src=&quot;/foo.jpg&quot; alt=&quot;Bar&quot; /&gt;
+&lt;/picture&gt;
+</code></pre>
+<p>The picture element is <a href="https://caniuse.com/picture">supported across all major browsers</a>. You can set your own thresholds depending on the target viewport width; screen widths can vary significantly between devices, but mobile phones typically don't have a screen width greater than 450 pixels at time of writing. Most modern browser developer tools let you <a href="https://developer.chrome.com/docs/devtools/device-mode/">simulate mobile devices</a>, letting you test the functionality without needing the physical device itself.</p>
+<h2 id="relevant-links-11"><a class="header" href="#relevant-links-11">Relevant Links</a></h2>
+<ul>
+<li><a href="https://caniuse.com/picture">&quot;Can I use...&quot; entry for the picture tag</a></li>
+<li><a href="https://imagemagick.org/index.php">ImageMagick Home page</a> - a tool for resizing images</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="use-appropriate-image-formats"><a class="header" href="#use-appropriate-image-formats">Use appropriate image formats</a></h1>
+<p>Always try to use an appropriate format for the type of image you are working with. Photographs work well in lossy formats such as JPEG, but if you want to draw a logo or similar in different sizes and colours, SVG may be more appropriate.</p>
+<p>Here's a short list of other recommendations. Note that WebP and AFIV are both versatile enough to fulfil multiple roles, and normally offer 20-30% better compression than alternatives. Where feasible, you should use vector graphics.</p>
+<table><thead><tr><th>Image Type</th><th>Preferred Format</th><th>Fallback Format</th></tr></thead><tbody>
+<tr><td>Photography</td><td>WebP, AVIF</td><td>JPEG</td></tr>
+<tr><td>Flow Diagram</td><td>SVG</td><td>WebP, AVIF,PNG</td></tr>
+<tr><td>Animation</td><td>WebP, AVIF</td><td>GIF</td></tr>
+<tr><td>Transparency</td><td>WebP, AVIF</td><td>PNG, GIF</td></tr>
+<tr><td>Logo</td><td>SVG</td><td>WebP, AVIF, PNG</td></tr>
+<tr><td>Icon</td><td>SVG</td><td>WebP, AVIF, PNG</td></tr>
+</tbody></table>
+<p>Choosing an inappropriate format can result in image files <em>much larger</em> than they need to be (sometimes hundreds of times larger).</p>
+<p><strong>Be cautious using the AVIF format</strong>; whilst it is intended as a successor to WebP, current tooling and <a href="https://caniuse.com/avif">browsers</a> are not yet mature enough to fully support it, so you need to provide fallback images within your pages using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">HTML5 <code>picture</code></a> element.</p>
+<h2 id="relevant-links-12"><a class="header" href="#relevant-links-12">Relevant Links</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types">MDN article on image types</a></li>
+<li><a href="https://caniuse.com/webp">&quot;Can I use&quot;... entry for WebP</a></li>
+<li><a href="https://caniuse.com/avif">&quot;Can I use&quot;... entry for AVIF</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="make-use-of-modern-image-formats"><a class="header" href="#make-use-of-modern-image-formats">Make use of modern image formats</a></h1>
+<p><a href="https://developers.google.com/speed/webp">WebP</a> is a next-generation image format developed by Google and can be used in place of earlier formats such as JPEGs, PNGs and GIFs. The WebP format offers <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#webp">25-35% compression</a> over older formats and is <a href="https://caniuse.com/webp">supported by all major browsers</a>. The WebP format includes support for;</p>
+<ul>
+<li>Animation</li>
+<li>Transparency</li>
+<li>Lossless and Lossy formats</li>
+<li>Transparency</li>
+</ul>
+<p>Conversion from other formats into WebP will almost always result in a reduction in size without having to compromise on quality, and there are a number of tools out there which can handle the conversion for you, such as <a href="https://imagemagick.org/script/webp.php">ImageMagick</a> and the official <a href="https://developers.google.com/speed/webp/docs/precompiled">Command Line Tool</a>.</p>
+<blockquote>
+<h3 id="avif"><a class="header" href="#avif">AVIF</a></h3>
+<p>A successor to the webP format already exists in the form of <strong>AVIF</strong> which promises even better compression, however <a href="https://caniuse.com/avif">AVIF browser support</a> is not yet mature enough to use it without a fallback image (see Compatibility below).</p>
+</blockquote>
+<h2 id="compatibility"><a class="header" href="#compatibility">Compatibility</a></h2>
+<p>Whilst WebP is supported by most modern browsers, you may still want to include a fallback format in case you want to cater for older browsers. You can use the HTML <code>picture</code> element for this purpose;</p>
+<pre><code>&lt;picture&gt;
+  &lt;source srcset=&quot;/my-image.webp&quot; type=&quot;image/webp&quot; /&gt;
+  &lt;img src=&quot;my-image.jpeg&quot; alt=&quot;A picture of a cat&quot; /&gt;
+&lt;/picture&gt;
+</code></pre>
+<p>This will detect whether or not browser support exists for WebP and, if it does, the browser will use the WebP image in place of the JPEG (the JPEG will note be downloaded at all). The <code>picture</code> element also has <a href="https://caniuse.com/picture">near universal browser support</a>.</p>
+<h2 id="relevant-links-13"><a class="header" href="#relevant-links-13">Relevant Links</a></h2>
+<ul>
+<li><a href="https://caniuse.com/webp">&quot;Can I use...&quot; entry for WebP</a></li>
+<li><a href="https://caniuse.com/picture">&quot;Can I use...&quot; entry for the picture tag</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#webp">MDN article on WebP</a></li>
+<li><a href="https://developers.google.com/speed/webp">WebP Home Page</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="backend-code"><a class="header" href="#backend-code">Backend Code</a></h1>
+<p>This section covers some of the things you can do on the back-end of a web application (meaning things that you can do on the server) in order to reduce your energy footprint.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="use-the-right-kind-of-database"><a class="header" href="#use-the-right-kind-of-database">Use the right kind of database</a></h1>
+<p>Don't default to creating a backend server or a database if you don't need to. There may be alternatives, such as a JAMStack, static JSON file or just plan old HTML, which in combination with cloud-based online services could provide the functionality you need without the many overheads (environmental and otherwise) of running your own servers.</p>
+<h2 id="the-problem"><a class="header" href="#the-problem">The Problem</a></h2>
+<p>All too often, developers will reach straight for popular stacks or familiar stacks for everything. Stacks such as;</p>
+<ul>
+<li><strong>LAMP/MAMP</strong> (Linux/Mac, Apache, MySQL, PHP) - arguably the stack that popularized &quot;stacks&quot; in web development.</li>
+<li><strong>LYME</strong> (Linux, Yaws, Mnesia, Erlang)</li>
+<li><strong>MEAN/MERN/MEVN</strong> (Mongo, Express, Angular/React/Vue, Node)</li>
+</ul>
+<p>These stacks are popular conventions and there will of course be times when these are the perfect solution - a LAMP based solution, for example, provides a simple deployment model that can easily be performed by people with very little technical experience. This gives everyone the ability to deploy &quot;out of the box&quot; solutions to common problems.</p>
+<p>Oftentimes though, these stacks are <strong>used by default without considering alternatives</strong>. LAMP-stack based library Wordpress, for example, reportedly powers <a href="https://wordpress.com/">42% of the web</a> and has a huge and vibrant ecosystem. There's no disputing that Wordpress is an excellent CMS, but how many of those sites are just a couple of static pages and a contact form?</p>
+<h2 id="the-alternative"><a class="header" href="#the-alternative">The Alternative</a></h2>
+<p>Consider the aforementioned scenario, where a customer simply wants some static content and some kind of form, maybe one that sends emails. You can achieve this using static HTML and some online services;</p>
+<ul>
+<li>If the customer will never be editing the content themselves, why plug in a CMS? You could either just hard code the static content, write it in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> files or even put it into a local <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> file.</li>
+<li>If the customer wants the ability to edit content themselves, consider providing this feature through a cloud based content platform such as <a href="https://www.sanity.io/">Sanity.io</a>.</li>
+<li>If the customer wants a contact form, the hosting provider <a href="https://www.netlify.com/">Netlify</a> provides hosting for static sites, plus the abiltiy to <a href="https://docs.netlify.com/forms/setup/">create custom forms</a> to collect feedback. Alternatively you could use an email platform such as <a href="https://sendgrid.com/">SendGrid</a>.</li>
+</ul>
+<p>The tooling around JavaScript is so good these days that implementing the above might not be as tricky as you would think. On top of this, most online services will be run out of the &quot;big three&quot; cloud providers (Microsoft, Google and Amazon) who all have made sustainability pledges and are comitted to moving towards 100% renewable energy. Cloud based solutions often also implement sustainable scaling strategies to ensure their resources are being used efficiently.</p>
+<p>It'll probably cost quite a lot less than running a server 24/7 too.</p>
+<h2 id="jamstack"><a class="header" href="#jamstack">JAMstack</a></h2>
+<p>JAMStack (Javascript, APIs and Markup) is a modern approach to creating web applications where you handle the layout, functionality and content on the client using JavaScript and Markdown. Any functionality that cannot be handled on the client (such as sending emails) is handled using APIs, be they either online services or APIs you write yourself.</p>
+<p>The advantage of all this is that you don't have a server running around the clock waiting for requests that may never come. Popular JAMStack frameworks include <a href="https://nextjs.org/">Next.JS</a>, <a href="https://www.gatsbyjs.com/">Gatsby</a> and <a href="https://gohugo.io/">Hugo</a>.</p>
+<h2 id="databases"><a class="header" href="#databases">Databases</a></h2>
+<p>On the database front, oftentimes people will spin up a database server purely because they believe that is the only option for storing data... but you might be able to get away with a simple JSON file containing the whole database. This could then be cached locally (depending how big it is) and hey presto - all data access is happening locally and no data is being sent over the wire.</p>
+<p>If you are working mainly with static data</p>
+<ul>
+<li>That changes infrequently</li>
+<li>That is only really edited by power users or developers</li>
+<li>With simple access patters such as &quot;get by id&quot; or &quot;filter by category&quot;</li>
+</ul>
+<p>Then <strong>you probably don't need a database</strong> - another carbon (and money) expense you can get rid of, plus another boost to your application's performance. Choosing JSON as a format also means you have an easier path to migrate to a database should you ever decide you need one, as JSON is the format used by popular solutions such as <a href="https://www.mongodb.com/">MongoDB</a> and <a href="https://couchdb.apache.org/">CouchDB</a>.</p>
+<p>It's also <strong>one less security concern</strong> for you to worry about, as online providers will often take care of data protection concerns such as backups and data integrity for you.</p>
+<h2 id="relevant-links-14"><a class="header" href="#relevant-links-14">Relevant Links</a></h2>
+<ul>
+<li><a href="https://jamstack.org/">JAMStack.org</a> - A comprohensive guide for building JAMStack sites.</li>
+<li><a href="https://stackshare.io/">StackShare.io</a> - see what stacks other companies are using.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="choose-a-green-host"><a class="header" href="#choose-a-green-host">Choose a green host</a></h1>
+<p>When choosing a host for your website or application, check the provider's green credentials. Have they made any kind of pledge or statement about their sustainability policies? Do they use only renewable energy suppliers themselves? If not, it might be better for you to take your business elsewhere.</p>
+<p>Switching to a greener hosting provider <strong>does not necessarily mean that your costs will go up</strong>. At time of writing, <a href="https://en.wikipedia.org/wiki/Cost_of_electricity_by_source">renewable energy is actually undercutting fossil fuels</a> in terms of price and that trend is forecast to continue. Not moving to a green host now may in fact end up costing you more in the long run.</p>
+<p>The <a href="https://www.thegreenwebfoundation.org/">Green Web Foundation</a> maintains a database of green hosts and provide a tool that can be used to <strong>check whether any website is hosted green</strong>. Ensure that you read the status description given by GWF tool carefully - just because a host does not evaluate as &quot;green&quot; does not necessarily mean that it isn't hosted green, it could just be that a database record doesn't exist for it yet.</p>
+<p>You should try to always ensure that your application and its infrastructure is as <strong>portable</strong> as possible and try to minimize vendor lock-in. This will allow you to swap hosts easily and with minimal disruption, making the decision to migrate to a greener provider trivial. High levels of portability can be achieved through the use of <a href="https://en.wikipedia.org/wiki/Docker_(software)">containerization</a> and abstraction through libraries.</p>
+<p>This site is currently hosted on <a href="https://www.netlify.com/">Netlify</a>. <a href="https://www.netlify.com/sustainability/">Netlify have published a Sustainability Pledge</a> publically and use <a href="https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true">AWS</a> under the hood. Not only are <a href="https://sustainability.aboutamazon.com/environment/the-cloud">AWS committed to being 100% renewable by 2025</a>, they have alerady achieved this in some European sites such as Frankfurt.</p>
+<p>Being able to say that your applications are hosted by green providers is one of the <strong>most basic yet powerful</strong> statements digital companies can make in terms of its own sustainability policies. Finding out whether your provider has a sustainability policy is just a google search away. If they do not mention sustainability in any of their literature, contact customer support to ask them about it. If the host has no green policies, you should seriously consider switching to a different host.</p>
+<h2 id="relevant-links-15"><a class="header" href="#relevant-links-15">Relevant Links</a></h2>
+<ul>
+<li><a href="https://www.thegreenwebfoundation.org/">Green Web Foundation</a></li>
+</ul>
+<h3 id="cloud-provider-sustainability-pages"><a class="header" href="#cloud-provider-sustainability-pages">Cloud Provider sustainability pages</a></h3>
+<ul>
+<li><a href="https://sustainability.aboutamazon.com/environment/the-cloud">AWS Sustainability</a></li>
+<li><a href="https://cloud.google.com/sustainability">Google Cloud Sustainability</a></li>
+<li><a href="https://www.microsoft.com/en-us/corporate-responsibility/sustainability">Microsoft Environmental Sustainability</a></li>
+</ul>
+<h3 id="popular-hosting-company-sustainability-pages"><a class="header" href="#popular-hosting-company-sustainability-pages">Popular hosting company sustainability pages</a></h3>
+<ul>
+<li><a href="https://www.netlify.com/sustainability/">Netlify sustainability</a></li>
+<li><a href="https://vercel.com/support/articles/what-is-vercel-green-energy-policy">Vercel sustainability</a></li>
+<li><a href="https://www.rackspace.com/en-gb/about/responsibility">Rackspace sustainability</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="optimise-data-queries"><a class="header" href="#optimise-data-queries">Optimise data queries</a></h1>
+<p>When querying for external data, ensure that your requests are efficient and inexpensive by only requesting what you need and caching agressively. Requesting excessive amounts of data will not only slow your application down, it will increase its energy footprint. The following is a list of common mistakes to look out for;</p>
+<h2 id="external-apis"><a class="header" href="#external-apis">External APIs</a></h2>
+<p>Making optimisations for queries to external APIs is particularly important because these services are often rate-limited so on top of the carbon cost and the slow response times, you may also be burning through your quota faster than you need to!</p>
+<ul>
+<li>When querying an external REST API, check whether the provider allows you to specify which fields to return. If it does, ensure you only ask for the fields you need. If the external API implements the <a href="https://jsonapi.org/">JsonAPI</a> specification, it may have this functionality by default (see <a href="https://jsonapi.org/format/#document-compound-documents">JsonAPI compound documents</a>).</li>
+<li>Don't send the same query to an API endpoint multiple times if that data is not likely to have changed. Reference data such as categories should be cached locally if possible.</li>
+<li>If the API is graphQL based then you will be able to request associated records in a single query - graphQL always allows you to do this by design.</li>
+</ul>
+<h2 id="databases-1"><a class="header" href="#databases-1">Databases</a></h2>
+<p>It is equally important to optimise queries that go directly to a database.</p>
+<ul>
+<li>If using an RDBMS, never <code>select * from table</code> unless you are going to be using every single field on that table.</li>
+<li>If using a NoSQL database, never <code>scan</code> the whole table unless you are planning to use every single record that is returned and have no alternatives. As a general rule, if you are finding that you are having to do this then it probably means there is a problem with your database design - you should optimise for the access patterns you are going to need.</li>
+<li>Consider pre-calculating aggregated values such as sums, counts and averages. Rather than re-computing these values every time the user asks, you could just calculate them once every time a new record is inserted. Doing this will also mean that you can be confident that your database will scale.</li>
+</ul>
+<h2 id="n1-queries-antipattern"><a class="header" href="#n1-queries-antipattern">N+1 Queries antipattern</a></h2>
+<p>The <strong>N+1 queries antipattern</strong> occurs when you have a query nested within the items returned by another query and is usually encountered when you are querying for associated records within an existing list of records. To illustrate this, imagine you are creating a blog with the following one-to-many relationship;</p>
+<pre><code>A post has 1 author
+An author has many posts
+</code></pre>
+<p>You can easily get &quot;all blogs&quot; in a single database or API query, but if you are not careful you may end up requesting the author details for each blog post you returned individually (hence the name N+1 - N queries for authors plus the original 1 to get the post).</p>
+<p>Your code can be affected by this whether you are querying from a REST API or connecting directly to a database and can sometimes be obscured if you are using a client library to handle the query for you. It is always important to keep an eye on your logs to make sure you are not sending an excessive number of queries.</p>
+<p>In terms of avoiding the problem:</p>
+<ul>
+<li>If this is an API that you do not have control over, check whether other endpoints are more appropriate or whether functionality exists to return the data you need in a single query. If you do have control over the API, ensure that the funcionality exists to serve the requests you want to make.</li>
+<li>If this is a database, you should optimise queries for the access patterns you require - in an RDBMS, this may mean making one query that aggregates multiple records together into one.</li>
+<li>You are particularly susceptible to this issue if you are using an <a href="https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping">ORM library</a> because those libraries explicitly try to hide the complexities of a query from you. Inexperienced developers may find that they are sending N+1 queries without even knowing! ORM libraries should always provide functionality to get around the issue, such as the <a href="https://guides.rubyonrails.org/active_record_querying.html#eager-loading-associations">eager loading funcionality in ActiveRecord</a> from the Ruby on Rails ecosystem.</li>
+<li>If you are building a GraphQL API you will almost certainly encounter this issue as your users will, by design, be able to query associated records for every data type in your schema. Because this issue is so common, a batching-and-caching library called <a href="https://github.com/graphql/dataloader">DataLoader</a> was created to deal with this very issue.</li>
+</ul>
+<h2 id="relevant-links-16"><a class="header" href="#relevant-links-16">Relevant Links</a></h2>
+<ul>
+<li><a href="https://jsonapi.org/format/#document-compound-documents">JSON API Compound Documents</a></li>
+<li><a href="https://docs.djangoproject.com/en/3.2/ref/models/querysets/#select-related">Eager loading for Django ORM</a></li>
+<li><a href="https://guides.rubyonrails.org/active_record_querying.html#eager-loading-associations">Eager loading for ActiveRecord ORM</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="optimize-your-api"><a class="header" href="#optimize-your-api">Optimize your API</a></h1>
+<p>Minimize the amount of data returned by a single API request by allowing users to customize what you send to them. There are many ways you can do this:</p>
+<ul>
+<li><strong>Pre-aggregate metrics</strong> such as counts and averages so your user doesn't have to do these calculations themselves.</li>
+<li>Empower your users to <strong>only request the data they actually need</strong> for a given use case, for example specific fields or specific quantities.</li>
+<li>Allow your user to <strong>pre-fetch related records</strong> in the same request.</li>
+<li>Make sure there are ways for the user to <strong>download and cache</strong> reference data such as categories.</li>
+</ul>
+<p>If you ensure that your users can minimize the amount of data they request from your API, you will save data and reduce the energy footprint of your application not only for your own customers but also for your customer's cutomers.</p>
+<h2 id="example-a-blog-with-comments"><a class="header" href="#example-a-blog-with-comments">Example: A Blog with comments</a></h2>
+<p>Suppose you are creating an API for a blog with comments - a poor API might expose an endpoint like the following example as the only way to get a list of the blogs for a given month;</p>
+<pre><code>GET /posts/?year=2021&amp;month=10
+[
+  {
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;My first article&quot;,
+    &quot;date&quot;: &quot;2021-10-10&quot;,
+    &quot;body&quot;: &quot;This is the full body of the artilce&quot;
+  },
+  //... ALL posts follow
+]
+</code></pre>
+<p>In order to find the comments for this post, the user must send away a second request to the <code>comments</code> endpoint;</p>
+<pre><code>GET /posts/1/comments/
+[
+  { &quot;author&quot;: &quot;Fred&quot; , &quot;comment&quot;: &quot;I totally agree&quot;},
+  { &quot;author&quot;: &quot;Barney&quot; , &quot;comment&quot;: &quot;Good post&quot;},
+]
+</code></pre>
+<p>Let's say your customer is creating a &quot;browse posts per month&quot; feature for their site. To do this, all they need from your API is the title, the date and the <em>number</em> of comments for a given month - they also want to paginate through 10 posts at a time. With no way of preventing all of this data being sent back, the user is required to make a potentially large request for all the blog data, and then another request per post to get the comment count - this will all include data they do not need.</p>
+<p>Now imagine you used a different model and gave the user some control over what they received in the response and pre-aggregated the comment count such that it could be requested directly via the blog endpoint;</p>
+<pre><code>GET /posts/?year=2021&amp;month=10&amp;fields=title,date,commentCount&amp;skip=0&amp;take=10
+[
+  {
+    &quot;title&quot;: &quot;My first article&quot;,
+    &quot;date&quot;: &quot;2021-10-10&quot;,
+    &quot;commentCount&quot;: 2
+  },
+  //... more posts follow
+]
+</code></pre>
+<p>Through our API we have allowed the user to use the <em>querystring</em> of the request to fine tune the amount of data we return - they request only specific fields (using the <code>fields</code> key) and to specify the number of records they want to return (through the <code>skip</code> and <code>limit</code> keys). No more data being wasted, plus this will likely save compute time and thus speed up the request.</p>
+<p>In addition, doing this also gives us confidence that our API will scale because we can now predict (and set limits on) the amount of data a request might return - on our original API implementation, a single month may have many blogs (a metric we might not have control of) and each blog may have many comments (a metric we almost certainly do not have control of!) - that's potentially a lot of data!</p>
+<h2 id="using-a-specification"><a class="header" href="#using-a-specification">Using a specification</a></h2>
+<p>Whilst you <em>can</em> design a bespoke API that is optimal for your users, there are a number of <strong>specifications</strong> out there that provide the recommended optimisations and more out of the box: two in particular are <a href="https://jsonapi.org/">JSON-API</a> and <a href="https://graphql.org/">GraphQL</a>.</p>
+<p>Both of these provide, by design, implementations that allow users to only request the data they need and offer conventions for patterns such as pagination and pre-fetching related records.</p>
+<p>As well as giving you a battle-tested pattern to base your API around, your customers are also likely to thank you for the improved developer experience they receive when consuming your API: Not only are responses now tailorable, they are also <em>predictable</em> and because both JSON-API and GraphQL are <em>schema-based</em>. This means that you can auto-generate your documentation and your API consumers can auto-generate much of their client code!</p>
+<h2 id="relevant-links-17"><a class="header" href="#relevant-links-17">Relevant Links</a></h2>
+<ul>
+<li><a href="https://jsonapi.org/">JSON-API</a></li>
+<li><a href="https://graphql.org/">GraphQL</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="use-the-right-kind-of-database-1"><a class="header" href="#use-the-right-kind-of-database-1">Use the right kind of database</a></h1>
+<p>Choose the correct type of database for the job you are doing. By defaulting to popular or familiar database types, you may be missing the opportunity to optimise metrics such as data size and CPU usage, subsequently increasing your energy footprint.</p>
+<p>For many years, relational databases such as Postgres, SQL Server and MySQL have dominated the online database landscape. As the web has matured, certain patterns and use cases have emerged for which relational databases are not an ideal fit. Eventually these patterns became common enough to spawn database architectures specifically built around those use cases.</p>
+<p>Examples of modern database paradigms include;</p>
+<table><thead><tr><th>Database Type</th><th>Examples</th><th>Use for</th></tr></thead><tbody>
+<tr><td>Relational</td><td>Postgres, MySQL, SQL Server</td><td>Traditional information systems with unpredictable access patterns</td></tr>
+<tr><td>Key-Value</td><td>Redis, memcached</td><td>Caching, Queues, Leaderboards</td></tr>
+<tr><td>Document Store</td><td>MongoDB, Elasticsearch</td><td>Semi-structured document-oriented data</td></tr>
+<tr><td>Graph Database</td><td>Neo4J</td><td>Fraud Detection, Recommendation Engines, highly relational data</td></tr>
+</tbody></table>
+<p>The decision around which database to use is highly case-specific, but the core principle is <strong>not to simply default to the popular or familiar choice</strong>. Look at your requirements and choose a database based on those - this might involve doing some research to see how other people solve your particular problem. Think about whether things like <strong>high-availability</strong> or <strong>burst-traffic scalability</strong> are important to you (in which case, SQL might not be the best choice due to its inability to scale easily) or whether or not you can identify all of your access patterns up front (and if not, SQL probably <em>is</em> a good choice due to its flexibility).</p>
+<p>Even within each database paradigm there are decisions to be made around <strong>which product to use</strong>, prompting more research. In the case of Key-Value databases for example, there are important differences between <a href="https://en.wikipedia.org/wiki/Redis">Redis</a> and <a href="https://en.wikipedia.org/wiki/Memcached">memcached</a> that might make you choose one over the other;</p>
+<ul>
+<li>Redis allows you to persist your data to disk (memcached cannot do this without plugins).</li>
+<li>Memcached is multithreaded, allowing you to handle more operations at once on multi core computers.</li>
+<li>Redis is very feature rich, whereas memcached just does one thing well.</li>
+<li>Memcached benchmarks faster on writes, although has parity with redis on reads.</li>
+<li>Whilst both databases are supported in multiple languages, wider support exists for Redis.</li>
+</ul>
+<p>It's also about making your own life easier. Opting for a graph database, for example, brings with it all the graph <em>algorithms</em> you might need such as measures of <a href="https://en.wikipedia.org/wiki/Centrality">centrality</a> and <a href="https://en.wikipedia.org/wiki/Distance_(graph_theory)">distance</a>, or the ability to find clusters. Whilst you <em>could</em> model your graph data within a relational database, this would then require you to write all these algorithms yourself should you want to use them. Not only would this take up a lot of time and effort, your own implementations are unlikely to be as efficient as those provided by a database specifically architected for that kind of task.</p>
+<p>Using certain database paradigms also opens up the opportunity to adopt a serverless architecture - <a href="https://aws.amazon.com/dynamodb/">AWS DynamoDB</a> and <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/introduction">Azure CosmosDB</a> are both highly scalable NOSQL databases that offer serverless, consumption-based plans - this means you only pay for what you use, but also that you don't have a database server running 24/7 burning electricity when you're not even using it.</p>
+<h2 id="relevant-links-18"><a class="header" href="#relevant-links-18">Relevant Links</a></h2>
+<ul>
+<li><a href="https://azure.microsoft.com/en-gb/product-categories/databases/">Databases on Azure</a></li>
+<li><a href="https://aws.amazon.com/products/databases/">Databases on AWS</a></li>
+<li><a href="https://cloud.google.com/products/databases">Databases on Google Cloud</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="appendix-a-external-resources"><a class="header" href="#appendix-a-external-resources">Appendix A: External Resources</a></h1>
+<p>Links to fellow knowledge-sharers in the field of sustainable web development. Please take the time to read these — this book covers ways to reduce network traffix, data and CPU usage, but for a broader look at the topic we recommend these resources:</p>
+<ul>
+<li>
+<p><a href="https://sustainablewebdesign.org/">Sustainable Web Design</a> - A selection of strategies and advice around sustainable web design, covering technical as well as non-technical aspects.</p>
+</li>
+<li>
+<p><a href="https://principles.green/">Principles.green</a> - The Principles of Sustainable Green Software Engineering are a core set of competencies needed to define, build and run green software applications.</p>
+</li>
+<li>
+<p><a href="https://www.thegreenwebfoundation.org/">The Green Web Foundation</a> - An organisation offering tools, datasets and services within the field of green internet. One dataset in particular is an effort to curate a list of hosting providers that use renewable energy.</p>
+</li>
+<li>
+<p><a href="https://github.com/thegreenwebfoundation/">The Green Web Foundation on Github</a> - Selection of open source software by the green web foundation. Includes a javascript library for calculating CO2 emissions using the shift project 1-byte model.</p>
+</li>
+<li>
+<p><a href="https://www.sustainablewebmanifesto.com/">Sustainable Web Manifesto</a> - A manifesto for a sustainable web - signed by almost 2000 people.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="useful-tools"><a class="header" href="#useful-tools">Useful tools</a></h1>
+<p>A number useful tools available to help measure and optimise your applications.</p>
+<ul>
+<li>
+<p>The people over at the <a href="https://www.thegreenwebfoundation.org/">Green Web Foundation</a> implemented a Javascript library called <a href="https://github.com/thegreenwebfoundation/co2.js">CO2.js</a> which aims to provide an implementation of the 1-byte model for use in tools and APIs.</p>
+</li>
+<li>
+<p><a href="https://sustainablewebdesign.org/">Sustainable Web Design</a> (built by <a href="https://www.mightybytes.com/">MightyBytes</a> and <a href="https://www.wholegraindigital.com/">Wholegrain Digital</a>) have produced a couple of tools which can help you calculate a website's carbon footprint: The <a href="https://ecograder.com/">Ecograder</a> scores websites based on a number of factors using a combination of external APIs. The <a href="https://www.websitecarbon.com/">Website carbon calculator</a> can give you an estimate of your website's carbon footprint (including a <a href="https://www.websitecarbon.com/how-does-it-work/">detailed explaination of how that estimate is calculated</a>).</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
