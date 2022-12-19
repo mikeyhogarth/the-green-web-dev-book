@@ -33,10 +33,11 @@ jobs:
         with:
           mdbook-version: 'latest'
       - run: mdbook build
+      - run: mv index.html book/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./
+          path: book/
 
   # Deployment job
   deploy:
