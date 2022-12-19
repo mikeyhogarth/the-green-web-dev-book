@@ -2,6 +2,8 @@
 
 E-book on the topic of environmentally friendly web development. This book is currently a work in progress.
 
+Deployed to Github Pages: https://mikeyhogarth.github.io/the-green-web-dev-book/
+
 ## Get Started
 
 This repository is based on [MDBook](https://rust-lang.github.io/mdBook/index.html). Follow the [installation instructions](https://rust-lang.github.io/mdBook/guide/installation.html) there. Once `mdbook` is installed, you can use the following commands to work with this repository:
