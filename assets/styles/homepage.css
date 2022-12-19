@@ -37,7 +37,7 @@ p,
 
 .btn:hover,
 a:hover {
-  filter: brightness(110%);
+  filter: brightness(125%);
 }
 
 p {
