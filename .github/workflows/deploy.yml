@@ -34,8 +34,11 @@ jobs:
         with:
           mdbook-version: 'latest'
       - run: mdbook build
-      #- name: Upload artifact
-      #  uses: actions/upload-pages-artifact@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: book/
+
 
   # Deployment job
   deploy:
