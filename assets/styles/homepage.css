@@ -1,0 +1,58 @@
+:root {
+  --personality: rgba(46, 125, 50);
+}
+
+body {
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+p,
+.btn {
+  margin: 0.2em 0;
+}
+
+.btn {
+  background-color: var(--personality);
+  font-size: 1.8em;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.btn:hover,
+a:hover {
+  filter: brightness(110%);
+}
+
+p {
+  margin-top: 1em;
+}
+
+a {
+  color: var(--personality);
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    text-align: center;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+}

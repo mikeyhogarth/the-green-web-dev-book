@@ -17,3 +17,10 @@ mdbook build
 ## Contributing
 
 Contributions are welcome but please get in touch before submitting any significantly large pull requests.
+
+## License
+
+Two licenses apply to this repository:
+
+- Code samples and any other bespoke code is covered under [GLPv3](https://github.com/mikeyhogarth/the-green-web-dev-book/blob/main/LICENSE).
+- The content of the book itself is covered under [http://creativecommons.org/licenses/by-sa/4.0/](Creative Commons Attribution-ShareAlike 4.0 International License).
