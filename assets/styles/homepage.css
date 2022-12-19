@@ -29,7 +29,7 @@ p,
 
 .btn {
   background-color: var(--personality);
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: white;
   text-decoration: none;
   padding: 0.5em 1em;
@@ -52,7 +52,17 @@ a {
 @media screen and (max-width: 600px) {
   body {
     text-align: center;
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  h1 {
+    font-size: 4em !important;
+  }
+  main {
+    font-size: 1.2em;
+  }
+  .btn {
+    font-size: 1.2em;
   }
 }
