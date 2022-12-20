@@ -6,7 +6,7 @@ Deployed to Github Pages: https://mikeyhogarth.github.io/the-green-web-dev-book/
 
 ## Get Started
 
-This repository is based on [MDBook](https://rust-lang.github.io/mdBook/index.html). Follow the [installation instructions](https://rust-lang.github.io/mdBook/guide/installation.html) there. Once `mdbook` is installed, you can use the following commands to work with this repository:
+The software that builds the book itself is powered by the excellent [MDBook](https://rust-lang.github.io/mdBook/index.html). Follow the [installation instructions](https://rust-lang.github.io/mdBook/guide/installation.html) there. Once `mdbook` is installed, you can use the following commands to work with this repository:
 
 ```
 # Run locally
@@ -15,6 +15,10 @@ mdbook serve
 # Create a production build
 mdbook build
 ```
+
+## Deployment
+
+This book is auto-deployed to github pages via github actions.
 
 ## Contributing
 
